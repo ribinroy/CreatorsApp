@@ -1,0 +1,40 @@
+@import "../../shared/shared.scss";
+
+.navBarMainWrap {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: $base-color;
+    height: $navigation-height;
+    border: 1px solid #9ACCFF80;
+    border-radius: 30px 30px 0 0;
+    font-family: 'Cera Pro Medium';
+
+    div{
+        height: 100%;
+    }
+
+    .creatorsAppLogo{
+        width: 100%;
+        background-image: url("../../shared/Images/CreatorsAppLogo.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 150px;
+    }
+
+    .navMainItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: color .3s;
+        color: $base-black;
+
+        &:hover{
+            color: $base-hover-text-color;
+        }
+    }
+}
+
