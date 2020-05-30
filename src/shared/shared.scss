@@ -1,29 +1,141 @@
 $base-color: #c6538c;
 $base-black: #404040;
 $base-hover-text-color: #0AACFE;
+
+$main-head-text-color: #05024B;
 // ----------End of colors------------
 
-$navigation-height: 65px;
+$navigation-height: 70px;
+$breakpoint-md: 991px;
 // ----------End of measurements------------
 
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-// @font-face {
-//     font-family: 'Open Sans';
-//     font-style: normal;
-//     font-weight: 400;
-//     src: url('../fonts/open-sans-v13-latin-regular.eot'); /* IE9 Compat Modes */
-//     src: local('Open Sans'), local('OpenSans'),
-//          url('../fonts/open-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//          url('../fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-//          url('../fonts/open-sans-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
-//          url('../fonts/open-sans-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-//          url('../fonts/open-sans-v13-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
-// }
+@mixin flex-column() {
+    @include flex();
+    flex-direction: column;
+}
 
+@mixin flex-row() {
+    @include flex();
+    flex-direction: row;
+}
+// -----------end of Mixins-------------
 @font-face {
     font-family: 'Cera Pro Medium';
     font-style: normal;
-    font-weight: 400;
-    src: url('Fonts/Cera Pro Medium.otf'); /* IE9 Compat Modes */
-    // src: local('Open Sans'), local('OpenSans')
+    src: url("Fonts/Cera Pro Medium/Cera Pro Medium.eot"); /* IE9*/
+    src: url("Fonts/Cera Pro Medium/Cera Pro Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Fonts/Cera Pro Medium/Cera Pro Medium.woff2") format("woff2"), /* chrome、firefox */
+    url("Fonts/Cera Pro Medium/Cera Pro Medium.woff") format("woff"), /* chrome、firefox */
+    url("Fonts/Cera Pro Medium/Cera Pro Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("Fonts/Cera Pro Medium/Cera Pro Medium.svg#Cera PRO Regular") format("svg"); /* iOS 4.1- */
 }
+
+@font-face {
+    font-family: 'Cera Pro Bold';
+    font-style: normal;
+    src: url("Fonts/Cera Pro Bold/Cera Pro Bold.eot"); /* IE9*/
+    src: url("Fonts/Cera Pro Bold/Cera Pro Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Fonts/Cera Pro Bold/Cera Pro Bold.woff2") format("woff2"), /* chrome、firefox */
+    url("Fonts/Cera Pro Bold/Cera Pro Bold.woff") format("woff"), /* chrome、firefox */
+    url("Fonts/Cera Pro Bold/Cera Pro Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("Fonts/Cera Pro Bold/Cera Pro Bold.svg#Cera Pro Bold") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: 'Axiforma Medium';
+    font-style: normal;
+    src: url("Fonts/Axiforma/Axiforma Medium.eot"); /* IE9*/
+    src: url("Fonts/Axiforma/Axiforma Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Fonts/Axiforma/Axiforma Medium.woff2") format("woff2"), /* chrome、firefox */
+    url("Fonts/Axiforma/Axiforma Medium.woff") format("woff"), /* chrome、firefox */
+    url("Fonts/Axiforma/Axiforma Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("Fonts/Axiforma/Axiforma Medium.svg#Axiforma-Medium") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: 'Axiforma Bold';
+    font-style: normal;
+    src: url("Fonts/Axiforma Bold/Axiforma Bold.eot"); /* IE9*/
+    src: url("Fonts/Axiforma Bold/Axiforma Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Fonts/Axiforma Bold/Axiforma Bold.woff2") format("woff2"), /* chrome、firefox */
+    url("Fonts/Axiforma Bold/Axiforma Bold.woff") format("woff"), /* chrome、firefox */
+    url("Fonts/Axiforma Bold/Axiforma Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("Fonts/Axiforma Bold/Axiforma Bold.svg#Axiforma W05 Bold") format("svg"); /* iOS 4.1- */
+}
+
+// -----------end of Fonts-------------
+
+@keyframes swipeFromLeftToRight{
+    from{
+        opacity: 0;
+        transform: translate(-10px);
+    }
+}
+
+@keyframes swipeFromRightToLeft{
+    from{
+        opacity: 0;
+        transform: translate(10px);
+    }
+}
+
+// -----------end of animations-------------
+
+h1{
+    font-family: 'Cera Pro Bold';
+    font-size: 4.6rem !important;
+    color: $main-head-text-color;
+    letter-spacing: -3px;
+    line-height: 0.85 !important;
+    text-align: center;
+}
+
+h4 {
+    font-size: .9rem !important;
+    color: $base-black;
+    font-family: 'Axiforma Bold';
+}
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 15px;
+    color: $main-head-text-color;
+    letter-spacing: -0.67px;
+    line-height: 1.4;
+    font-family: 'Axiforma Medium';
+}
+
+.onePage{
+    width: 100vw;
+    height: 100vh;
+    padding-top: $navigation-height + 15px; 
+}
+
+.alignCenter{
+    text-align: center;
+}
+
+// -----------end of normal styles-------------
+
+@media only screen and (max-width: $breakpoint-md) {
+    p{
+        letter-spacing: -.6px;
+        line-height: 2;
+        font-size: 17px;
+        font-weight: 400 !important;
+    }
+
+    h1 {
+        font-size: 3.7rem !important;
+        line-height: 1 !important;
+    }
+}
+
+// -----------end of responsive handles-------------

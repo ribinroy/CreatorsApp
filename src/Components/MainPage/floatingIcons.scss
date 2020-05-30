@@ -1,0 +1,16 @@
+.flexRow .absoluteFlyingIcon{
+    position: absolute;
+    // background-image: url("../../shared/Images/Icons/Home/Money.png");
+    width: 4vmin;
+    height: 4vmin;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    $images: "Money", "Aesthetics", "Search", "PuppyEmoji", "Puppy", "Lady", "Drink", "ClipBoard", "Car", "BirthdayPup", "Burger", "Monitor", "WheelChair", "Mobile"; //all the names if the images to be displayed
+    @each $image in $images {
+        &.#{$image} {
+            background-image: url("../../shared/Images/Icons/Home/"+$image +".png");
+        }
+    }
+}

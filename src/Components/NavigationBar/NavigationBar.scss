@@ -7,8 +7,8 @@
     color: $base-color;
     height: $navigation-height;
     border: 1px solid #9ACCFF80;
-    border-radius: 30px 30px 0 0;
-    font-family: 'Cera Pro Medium';
+    border-radius: 20px 20px 0 0;
+    font-family: 'Axiforma Medium';
 
     div{
         height: 100%;
@@ -31,10 +31,91 @@
         cursor: pointer;
         transition: color .3s;
         color: $base-black;
-
+        background: rgba(0, 0, 0, 0);
+        height: 100%;
+        width: 100%;
+        border: 0;
+        padding: 0;
+        text-decoration: none;
+        
         &:hover{
             color: $base-hover-text-color;
         }
     }
+  
+    .flexRow {
+        @include flex-row();
+        height: 100%;
+    }
+
+    .mobNavOpen{
+        animation: swipeFromRightToLeft .3s 1;
+    }
+
+    .navMobileItem{
+        display: block;
+        cursor: pointer;
+        transition: color .3s;
+        color: $base-black;
+        background: rgba(0, 0, 0, 0);
+        height: 100%;
+        width: 100%;
+        border: 0;
+        padding: 0;
+        text-decoration: none;
+        @include flex-row();
+        
+        &:hover{
+            color: $base-hover-text-color;
+        }
+    }
+
+    .hamburgerIconWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .hamburgerIcon{
+            width: 25px !important;
+            height: 25px !important;
+            float: left;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("../../shared/Images/Icons/Hamburger.png");
+            animation: rotateLeft .3s 1;
+            margin-left: 15px;
+
+            &.active{
+                background-image: url("../../shared/Images/Icons/Close.png");
+                animation: rotateRight .3s 1;
+            }
+
+            @keyframes rotateLeft{
+                from{
+                    transform: rotate(-180deg);
+                }
+            }
+            
+            @keyframes rotateRight{
+                from{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
 }
 
+@media only screen and (max-width: $breakpoint-md) {
+    .navBarMainWrap{
+        border-radius: 0px;
+    }
+
+    .creatorsAppLogo {
+        margin-left: 10px;
+        animation: swipeFromLeftToRight .3s 1;
+    }
+}
