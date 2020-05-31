@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import * as serviceWorker from './serviceWorker';
-import NavigationBar from './Components/NavigationBar/NavigationBar.js'
-import MainPage from './Components/MainPage/MainPage.js'
+import NavigationBar from './Components/NavigationBar/NavigationBar.js';
+import MainPage from './Components/MainPage/MainPage.js';
+import Features from './Components/Features/Features.js';
+import Footer from './Components/Footer/Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <NavigationBar />
     <MainPage />
+    <Features />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

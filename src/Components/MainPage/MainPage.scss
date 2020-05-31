@@ -9,6 +9,7 @@ $button-color: #FFFFFF;
     @include flex-column();
     height: 100%;
     position: relative;
+    min-height: calc(100vh - #{$navigation-height});
 }
 
 .mainContentWrap {
@@ -16,17 +17,18 @@ $button-color: #FFFFFF;
     float: left;
     width: 100%;
     height: 100%;
-    padding: 0 12rem;
+    padding: 0 7rem;
     @include flex-column();
     position: relative;
 }
 
 .bottomContentWrap {
     flex: .2;
+    margin-top: 25px;
 }
 
 .subTextWrap {
-    width: 53vh;
+    width: 61vh;
     float: left;
     display: block;
     margin: 15px 0 !important;
@@ -38,10 +40,23 @@ button.register {
     color: $button-color;
     border: 0;
     box-shadow: 0px 13px 30px #A8A3FF66;
-    padding: 8px 60px;
+    padding: 10px 70px;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 15px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-image: url("../../shared/Images/Icons/ArrowRight.png");
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        background-position: center;
+        margin-left: 10px;
+        margin-top: 1px;
+    }
+    
 }
 
 @media only screen and (max-width: $breakpoint-md) {
@@ -54,6 +69,6 @@ button.register {
     }
     
     button.register{
-        padding: 13px 105px;
+        padding: 3vmin 15vmin;
     }
 }

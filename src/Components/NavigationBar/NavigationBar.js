@@ -6,61 +6,63 @@ import 'aos/dist/aos.css';
 
 function NavigationBar(){
     const [isHamburgerClicked, hamBurgerClicked] = useState(false);
-    const [menuLinks] = useState([{name:"Say Hi", link: "/#"},
-                                    {name:"Pricing", link: "/#"},
-                                    {name:"Register", link: "/#"}]);
+    const [menuLinks] = useState([{key: 1, name:"Say Hi", link: "/#"},
+                                    {key: 2, name:"Pricing", link: "/#"},
+                                    {key: 3, name:"Register", link: "/#"}]);
 
     useEffect(() => {
         // componentdidmount
         AOS.init({
             duration : 2000
         })
+
+        window.addEventListener('resize', function(){
+            hamBurgerClicked(false);
+        })
     })
 
     return (
-        <div>
-            <nav className="navBarMainWrap" data-aos="fade-down" data-aos-duration="500">
-                <Container>
-                    <Row>
-                        {!isHamburgerClicked &&
-                            <Col lg={1} className="d-none d-lg-block"></Col>
-                        }
-                        {!isHamburgerClicked &&
-                            <Col xs={10} lg={2}>
-                                <div className="creatorsAppLogo"></div>
-                            </Col>
-                        }
-                        {!isHamburgerClicked &&
-                            <Col xs={0} lg={5} className="d-none d-lg-block"></Col>
-                        }
-                        {!isHamburgerClicked && menuLinks.map((value,  index) => {
-                            return <Col xs={0} lg={1} className="d-none d-lg-block">
-                                        <a href={value.link}  className="navMainItem">{value.name}</a>
-                                    </Col>
-                        })}
-                        {!isHamburgerClicked &&
-                            <Col xs={0} lg={1} className="d-none d-lg-block"></Col>
-                        }
-
-                        {isHamburgerClicked &&
-                            <Col xs={2} className="d-lg-none d-xs-block "></Col>
-                        }
-                        {isHamburgerClicked && 
-                            <Col xs={8} className="d-lg-none d-xs-block flexRow mobNavOpen">
-                               {
-                                   menuLinks.map((value,  index) => {
-                                            return <a href={value.link}  className="navMobileItem">{value.name}</a>
-                                            })
-                                }
-                            </Col>
-                        }
-                        <Col xs={2} className="d-lg-none d-xs-block hamburgerIconWrap" onClick={() => hamBurgerClicked(!isHamburgerClicked)}>
-                            <div className={"hamburgerIcon " + (isHamburgerClicked ? 'active' : '')}></div>
+        <nav className="navBarMainWrap" data-aos="fade-down" data-aos-duration="500">
+            <Container className="noPadding">
+                <Row>
+                    {!isHamburgerClicked &&
+                        <Col lg={1} className="d-none d-lg-block"></Col>
+                    }
+                    {!isHamburgerClicked &&
+                        <Col xs={10} lg={2} className="noPadding">
+                            <div className="creatorsAppLogo"></div>
                         </Col>
-                    </Row>
-                </Container>
-            </nav>
-        </div>
+                    }
+                    {!isHamburgerClicked &&
+                        <Col xs={0} lg={5} className="d-none d-lg-block"></Col>
+                    }
+                    {!isHamburgerClicked && menuLinks.map((value,  index) => {
+                        return <Col xs={0} lg={1} key={index} className="d-none d-lg-block">
+                                    <a href={value.link}  className="navMainItem">{value.name}</a>
+                                </Col>
+                    })}
+                    {!isHamburgerClicked &&
+                        <Col xs={0} lg={1} className="d-none d-lg-block"></Col>
+                    }
+
+                    {isHamburgerClicked &&
+                        <Col xs={2} className="d-lg-none d-xs-block "></Col>
+                    }
+                    {isHamburgerClicked && 
+                        <Col xs={8} className="d-lg-none d-xs-block flexRowNav mobNavOpen">
+                            {
+                                menuLinks.map((value,  index) => {
+                                        return <a href={value.link} key={index} className="navMobileItem">{value.name}</a>
+                                        })
+                            }
+                        </Col>
+                    }
+                    <Col xs={2} className="d-lg-none d-xs-block hamburgerIconWrap noPadding" onClick={() => hamBurgerClicked(!isHamburgerClicked)}>
+                        <div className={"hamburgerIcon " + (isHamburgerClicked ? 'active' : '')}></div>
+                    </Col>
+                </Row>
+            </Container>
+        </nav>
     )
 }
 export default NavigationBar;

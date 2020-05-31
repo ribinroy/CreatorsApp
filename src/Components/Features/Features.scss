@@ -1,0 +1,313 @@
+@import "../../shared/shared.scss";
+
+$health-base-color: #FFE9FB;
+$health-hard-color: #F897E5;
+$health-font-color: #F53872;
+
+$finance-base-color: #E9FFF9;
+$finance-font-color: #76FBD5;
+$finance-hard-color: #00C48C;
+
+$special-info-color: #0AACFE;
+
+.healthContentsWrap{
+    animation: slideBottomToTop1 .4s 1;
+
+    h5{
+        color: $health-font-color;
+    }
+}
+
+.financeContentsWrap{
+    animation: slideBottomToTop2 .4s 1;
+    
+    h5{
+        color: $finance-font-color;
+    }
+}
+
+.featureSelectionWrap {
+    float: left;
+    width: 100%;
+    position: relative;
+    @include flex-row();
+    justify-content: space-between;
+    
+    &.isHealth{
+        //health selected
+        .healthFeature{
+            border: 3px solid $health-hard-color;
+        }
+    }
+    
+    &.isFinance{
+        //health selected
+        .financeFeature{
+            border: 3px solid $finance-hard-color;
+        }
+    }
+
+    .featureType {
+        height: 225px !important;
+        float: left;
+        width: calc(50% - 20px);
+        height: 100%;
+        border-radius: 9px;
+        border: 3px solid rgba(0,0,0,0);
+        cursor: pointer;
+        transition: border .3s;
+        margin-top: 10px;
+
+        &.healthFeature{
+            &:hover{
+                border: 3px solid $health-hard-color;
+            }
+
+            .featureTypeContent{
+                background-color: $health-base-color;
+                background-image: url("../../shared/Images/Health Items/Main.png");
+            }
+        }
+
+        &.financeFeature{
+            &:hover{
+                border: 3px solid $finance-hard-color;
+            }
+
+            .featureTypeContent{
+                background-color: $finance-base-color;
+                background-image: url("../../shared/Images/Finance Items/Main.png");
+            }
+        }
+
+        h3{
+            letter-spacing: -3.08px;
+        }
+
+        .featureTypeContent{
+            margin: 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            float: left;
+            border-radius: 9px;
+            padding: 25px;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: bottom;
+            background-size: 65%;
+            padding-bottom: 0px !important;
+        }
+    }
+}
+
+.featureContentItemWrap{
+    width: 100%;
+    // height: calc(50vh - 15px);
+    float: left;
+    margin-top: 30px;
+    // padding: 40px 0;
+    box-sizing: border-box;
+
+    &.rightAlignedImage{
+        .featureContentHeadingWrap,
+        .featureContentImageWrap{
+            float: left;
+        }
+
+        
+        .featureContentDesciprionWrap{
+            padding-right: 10vmin;
+            padding-right: 0px;
+            float: left;
+        }
+
+        .featureContentImageWrap{
+            float: right;
+        }
+    }
+
+    h3,
+    p,
+    h5{
+        text-align: left !important;
+    }
+
+    h3{
+        letter-spacing: -3.02px;
+        line-height: 1.05 !important;
+    }
+
+    p{
+        margin: 10px 0 20px 0 !important;
+    }
+
+    .featureContentImageWrap {
+        float: left;
+        width: calc(50% - 20px);
+        @include flex-row();
+        height: 100%;
+
+        .featureImage {
+            float: left;
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+            object-position: center;
+        }
+    }
+    
+    .featureContentHeadingWrap,
+    .featureContentDesciprionWrap {
+        float: right;
+        width: calc(50% - 30px);
+        padding-right: 10vmin;
+    }
+
+    .featureContentHeadingWrap{
+        h3{
+            padding-right: 8vmin !important;
+        }
+    }
+
+    .specialInfoWrap{
+        margin-top: 15px;
+        float: left;
+
+        .specialInfo {
+            font-family: "Axiforma Bold";
+            font-size: 14px;
+            color: $special-info-color;
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }  
+        
+        .specialIconsWrap {
+            float: left;
+        }
+
+        .iconDiv{
+            width: 35px;
+            height: 35px;
+            background-size: contain;
+            background-repeat: no-repeat; 
+            float: left;
+            margin-left: 15px;
+            margin-top: -5px;
+            cursor: pointer;
+        }
+
+        .appleIcon{
+            background-image:  url("../../shared/Images/Icons/Apple.png");
+        }
+
+        .androidIcon{
+            background-image:  url("../../shared/Images/Icons/Android.png");
+        }
+    }
+
+}
+
+.joinFooter{
+    float: left;
+    background-color: $main-head-text-color;
+    color: #fff;
+    background-image: url("../../shared/Images/Applaud.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 38px 51px #05024B36;
+    margin: 40px 0;
+    height: 220px;
+    background-size: 120px;
+    @include flex-column();
+    padding-bottom: 45px;
+
+    .specialIconsWrap {
+        float: left;
+    }
+
+    .joinMainText{
+        font-family: "Cera Pro Bold";
+        font-size: 2rem;
+    }
+
+    .joinSubText{
+        font-family: "Axiforma Medium";
+        font-size: 1rem;
+        padding: 0 20vmin;
+        text-align: center;
+    }
+
+    .joinArrow {
+        width: 35px;
+        height: 35px;
+        background: red;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+    .featureSelectionWrap {
+        display: block;
+
+        .featureType{
+            width: 100%;
+            height: 175px !important;
+        }
+    }
+
+    .featureContentItemWrap{
+        @include overflow-fix();
+        // height: calc(100vh - 35px);
+
+        .featureContentHeadingWrap,
+        .featureContentImageWrap,
+        .featureContentDesciprionWrap{
+            width: 100%;
+            padding-right: 0px;
+
+            h5{
+                text-align: center !important;
+            }
+
+            h3 {
+                padding: 10px 35px !important;
+                font-size: 2.1rem !important;
+            }
+
+            p {
+                padding: 0 30px !important;
+            }
+            
+            ul {
+                padding: 0 30px !important;
+            }
+
+            .flexRowOnlyOnMobile{
+                @include flex-row();
+            }
+            
+        }
+
+        .featureContentImageWrap{
+            height: 40%;
+            margin-bottom: 15px;
+        }
+    }
+
+    .specialInfoWrap{
+        width: 100%;
+        @include flex-column();
+
+        .iconDiv:first-child {
+            margin-left: 0 !important;
+        }
+    }
+}
