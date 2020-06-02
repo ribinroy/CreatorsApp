@@ -10,10 +10,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavigationBar />
-    <MainPage />
-    <Features />
-    <Footer />
+    <NavigationBar /> {/* Only the nav bar at the top */}
+    <MainPage />  {/* The first welcome page only*/}
+    <Features /> {/* Health/Finance Benefits and its features*/}
+    <Footer /> {/* Final Footer*/}
   </React.StrictMode>,
   document.getElementById('root')
 );

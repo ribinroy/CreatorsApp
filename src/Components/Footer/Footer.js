@@ -14,7 +14,7 @@ function Footer(){
                         </h2>
                         <p>
                             We would love you help to make this the best product out there.
-                            <br/>Shoot us a DM at hello@creatorsapp.cm
+                            <br/>Shoot us a DM at <a href="mailto:hello@creatorsapp.com">hello@creatorsapp.com</a>
                         </p>
                     </div>
                     <div className="contactsWrap">
