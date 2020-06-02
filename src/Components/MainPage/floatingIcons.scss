@@ -3,6 +3,8 @@
     // background-image: url("../../shared/Images/Icons/Home/Money.png");
     width: 4vmin;
     height: 4vmin;
+    min-width: 30px;
+    min-height: 30px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -11,6 +13,114 @@
     @each $image in $images {
         &.#{$image} {
             background-image: url("../../shared/Images/Icons/Home/"+$image +".png");
+        }
+    }
+
+    &.Aesthetics {
+        left: 10%;
+        top: 10%;
+    }
+    
+    &.PuppyEmoji {
+        left: 31%;
+        top: 5%;
+    }
+    
+    &.ClipBoard {
+        left: 50%;
+        top: 2%;
+    }
+    
+    &.Puppy {
+        right: 4%;
+        top: 5%;
+    }
+    
+    &.Money {
+        left: 5%;
+        top: 35%;
+    }
+    
+    &.Search {
+        right: 8%;
+        top: 22%;
+    }
+    
+    &.Drink {
+        right: 0%;
+        top: 34%;
+    }
+    
+    &.BirthdayPup {
+        left: 20%;
+        top: 53%;
+    }
+    
+    &.Car {
+        right: 12%;
+        top: 54%;
+    }
+    
+    &.WheelChair {
+        left: 9%;
+        bottom: 30%;
+    }
+    
+    &.Monitor {
+        bottom: 19%;
+        left: 25%;
+    }
+    
+    &.Burger {
+        bottom: 21%;
+        left: 46%;
+    }
+    
+    &.Lady {
+        right: 5%;
+        bottom: 22%;
+    }
+    
+    &.Mobile {
+        right: 27%;
+        bottom: 20%;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+    .flexRow .absoluteFlyingIcon{
+        &.Monitor {
+            bottom: 14% !important;
+            left: 6% !important;
+        }
+        
+        &.Car {
+            right: 9% !important;
+        }
+        
+        &.BirthdayPup {
+            left: 2% !important;
+        }
+        
+        &.Drink {
+            right: 3% !important;
+        }
+        
+        &.Search {
+            right: 0% !important;
+        }
+        
+        &.ClipBoard {
+            top: 0% !important;
+        }
+        
+        &.PuppyEmoji {
+            top: 1% !important;
+            left: 23% !important;
+        }
+        
+        &.Aesthetics {
+            left: 9% !important;
         }
     }
 }

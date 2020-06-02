@@ -5,7 +5,7 @@ $base-hover-text-color: #0AACFE;
 $main-head-text-color: #05024B;
 // ----------End of colors------------
 
-$navigation-height: 70px;
+$navigation-height: 80px;
 $breakpoint-md: 991px;
 // ----------End of measurements------------
 
@@ -24,6 +24,11 @@ $breakpoint-md: 991px;
     @include flex();
     flex-direction: row;
 }
+
+@mixin overflow-fix(){
+    overflow-y: hidden !important;
+    overflow-x: hidden;
+}
 // -----------end of Mixins-------------
 @font-face {
     font-family: 'Cera Pro Medium';
@@ -33,7 +38,7 @@ $breakpoint-md: 991px;
     url("Fonts/Cera Pro Medium/Cera Pro Medium.woff2") format("woff2"), /* chrome、firefox */
     url("Fonts/Cera Pro Medium/Cera Pro Medium.woff") format("woff"), /* chrome、firefox */
     url("Fonts/Cera Pro Medium/Cera Pro Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Cera Pro Medium/Cera Pro Medium.svg#Cera PRO Regular") format("svg"); /* iOS 4.1- */
+    url("Fonts/Cera Pro Medium/Cera Pro Medium.svg#Cera PRO Medium") format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
@@ -50,13 +55,23 @@ $breakpoint-md: 991px;
 @font-face {
     font-family: 'Axiforma Medium';
     font-style: normal;
-    src: url("Fonts/Axiforma/Axiforma Medium.eot"); /* IE9*/
-    src: url("Fonts/Axiforma/Axiforma Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("Fonts/Axiforma/Axiforma Medium.woff2") format("woff2"), /* chrome、firefox */
-    url("Fonts/Axiforma/Axiforma Medium.woff") format("woff"), /* chrome、firefox */
-    url("Fonts/Axiforma/Axiforma Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Axiforma/Axiforma Medium.svg#Axiforma-Medium") format("svg"); /* iOS 4.1- */
+    src: url("Fonts/Axiforma Medium/Axiforma Medium.eot"); /* IE9*/
+    src: url("Fonts/Axiforma Medium/Axiforma Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Fonts/Axiforma Medium/Axiforma Medium.woff2") format("woff2"), /* chrome、firefox */
+    url("Fonts/Axiforma Medium/Axiforma Medium.woff") format("woff"), /* chrome、firefox */
+    url("Fonts/Axiforma Medium/Axiforma Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("Fonts/Axiforma Medium/Axiforma Medium.svg#Axiforma Medium") format("svg"); /* iOS 4.1- */
 }
+
+@font-face {
+    font-family: 'Axiforma Regular';
+    src: url('Fonts/Axiforma Regular/Axiforma Regular.eot');
+    src: url('Fonts/Axiforma Regular/Axiforma Regular.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/Axiforma Regular/Axiforma Regular.woff') format('woff'),
+    url('Fonts/Axiforma Regular/Axiforma Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
 
 @font-face {
     font-family: 'Axiforma Bold';
@@ -66,76 +81,35 @@ $breakpoint-md: 991px;
     url("Fonts/Axiforma Bold/Axiforma Bold.woff2") format("woff2"), /* chrome、firefox */
     url("Fonts/Axiforma Bold/Axiforma Bold.woff") format("woff"), /* chrome、firefox */
     url("Fonts/Axiforma Bold/Axiforma Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Axiforma Bold/Axiforma Bold.svg#Axiforma W05 Bold") format("svg"); /* iOS 4.1- */
+    url("Fonts/Axiforma Bold/Axiforma Bold.svg#Axiforma Bold") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: "Axiforma SemiBold";
+    src: url("Fonts/Axiforma SemiBold/Axiforma SemiBold.eot"); /* IE9*/
+    src: url("Fonts/Axiforma SemiBold/Axiforma SemiBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Fonts/Axiforma SemiBold/Axiforma SemiBold.woff2") format("woff2"), /* chrome、firefox */
+    url("Fonts/Axiforma SemiBold/Axiforma SemiBold.woff") format("woff"), /* chrome、firefox */
+    url("Fonts/Axiforma SemiBold/Axiforma SemiBold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("Fonts/Axiforma SemiBold/Axiforma SemiBold.svg#Axiforma SemiBold") format("svg"); /* iOS 4.1- */
 }
 
 // -----------end of Fonts-------------
 
-@keyframes swipeFromLeftToRight{
-    from{
-        opacity: 0;
-        transform: translate(-10px);
-    }
-}
-
-@keyframes swipeFromRightToLeft{
-    from{
-        opacity: 0;
-        transform: translate(10px);
-    }
-}
-
-// -----------end of animations-------------
-
-h1{
-    font-family: 'Cera Pro Bold';
-    font-size: 4.6rem !important;
-    color: $main-head-text-color;
-    letter-spacing: -3px;
-    line-height: 0.85 !important;
-    text-align: center;
-}
-
-h4 {
-    font-size: .9rem !important;
-    color: $base-black;
-    font-family: 'Axiforma Bold';
-}
-
-p {
-    margin: 0 !important;
+ul{
     padding: 0 !important;
-    font-size: 15px;
-    color: $main-head-text-color;
-    letter-spacing: -0.67px;
-    line-height: 1.4;
-    font-family: 'Axiforma Medium';
-}
 
-.onePage{
-    width: 100vw;
-    height: 100vh;
-    padding-top: $navigation-height + 15px; 
-}
-
-.alignCenter{
-    text-align: center;
-}
-
-// -----------end of normal styles-------------
-
-@media only screen and (max-width: $breakpoint-md) {
-    p{
-        letter-spacing: -.6px;
-        line-height: 2;
-        font-size: 17px;
-        font-weight: 400 !important;
-    }
-
-    h1 {
-        font-size: 3.7rem !important;
-        line-height: 1 !important;
+    li {
+        font-size: 15px;
+        font-family: "Axiforma SemiBold";
+        letter-spacing: -0.4px;
+        list-style: none;
+        background-image: url("/Images/Icons/Check.png");
+        background-size: 13px;
+        background-repeat: no-repeat;
+        background-position: left;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        color: $main-head-text-color;
     }
 }
-
-// -----------end of responsive handles-------------

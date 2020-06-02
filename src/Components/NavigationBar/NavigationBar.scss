@@ -9,6 +9,14 @@
     border: 1px solid #9ACCFF80;
     border-radius: 20px 20px 0 0;
     font-family: 'Axiforma Medium';
+    z-index: 10;
+    background: #fff;
+
+    .flexRowNav {
+        @include flex-row();
+        height: 100%;
+        position: relative;
+    }
 
     div{
         height: 100%;
@@ -20,7 +28,7 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        max-width: 150px;
+        max-width: 180px;
     }
 
     .navMainItem {
@@ -37,6 +45,7 @@
         border: 0;
         padding: 0;
         text-decoration: none;
+        font-size: 17px;
         
         &:hover{
             color: $base-hover-text-color;
@@ -74,7 +83,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: self-start;
         cursor: pointer;
 
         .hamburgerIcon{
@@ -87,7 +96,7 @@
             background-size: contain;
             background-image: url("../../shared/Images/Icons/Hamburger.png");
             animation: rotateLeft .3s 1;
-            margin-left: 15px;
+            margin-left: 5px;
 
             &.active{
                 background-image: url("../../shared/Images/Icons/Close.png");
@@ -112,10 +121,12 @@
 @media only screen and (max-width: $breakpoint-md) {
     .navBarMainWrap{
         border-radius: 0px;
+        border-right: 0px;
+        border-left: 0px;
     }
 
     .creatorsAppLogo {
-        margin-left: 10px;
+        margin-left: 35px !important;
         animation: swipeFromLeftToRight .3s 1;
     }
 }
