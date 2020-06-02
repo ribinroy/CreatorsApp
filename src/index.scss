@@ -1,4 +1,4 @@
-@import "shared/shared.scss";
+@import "/shared/shared.scss";
 
 html{
     width: 100%;
@@ -108,23 +108,23 @@ p {
     font-family: 'Axiforma Medium';
 }
 
-ul{
-    padding: 0 !important;
+// ul{
+//     padding: 0 !important;
 
-    li {
-        font-size: 15px;
-        font-family: "Axiforma SemiBold";
-        letter-spacing: -0.4px;
-        list-style: none;
-        background-image: url("shared/Images/Icons/Check.png");
-        background-size: 13px;
-        background-repeat: no-repeat;
-        background-position: left;
-        padding-left: 25px;
-        margin-bottom: 10px;
-        color: $main-head-text-color;
-    }
-}
+//     li {
+//         font-size: 15px;
+//         font-family: "Axiforma SemiBold";
+//         letter-spacing: -0.4px;
+//         list-style: none;
+//         background-image: url("/shared/Images/Icons/Check.png");
+//         background-size: 13px;
+//         background-repeat: no-repeat;
+//         background-position: left;
+//         padding-left: 25px;
+//         margin-bottom: 10px;
+//         color: $main-head-text-color;
+//     }
+// }
 
 .onePage{
     width: 100%;
