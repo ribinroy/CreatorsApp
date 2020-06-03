@@ -186,11 +186,11 @@ function JoinPrivateBeta(){
                     <div className="joinSubText">Join a bunch of your friends on our waitlist</div>
                     <div className={"joinArrow " + (isFormOpened?"active":"")} onClick={() => changeFormOpened(!isFormOpened)}></div>
                 </div>
-                {isFormOpened && <form className="joinerFormWrap">
-                                    <input className="joinerInput" type="email" placeholder="You@example.com"/>
-                                    <input className="joinerInput"  type="text" placeholder="Nickname"/>
-                                    <input className="joinerInput"  type="text" placeholder="What do you do"/>
-                                    <button className="joinerSubmitButton">Let's do this</button>
+                {isFormOpened && <form className="joinerFormWrap" netlify>
+                                    <input className="joinerInput" type="email" name="Email" placeholder="You@example.com"/>
+                                    <input className="joinerInput"  type="text" name="Nickname" placeholder="Nickname"/>
+                                    <input className="joinerInput"  type="text" name="WhatYouDo" placeholder="What do you do"/>
+                                    <button className="joinerSubmitButton" type="submit">Let's do this</button>
                                     <p>
                                         No unsolicited emails. No spam. No hits, just updates
                                     </p>

@@ -151,6 +151,12 @@ $button-color: #9ACCFF;
         margin: 10px 0 20px 0 !important;
     }
 
+    ul{
+        li{
+            background-image: url("../../shared/Images/Icons/Check.png");
+        }
+    }
+
     .featureContentImageWrap {
         float: left;
         width: calc(50% - 20px);
