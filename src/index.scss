@@ -167,6 +167,17 @@ ul{
     height: inherit;
 }
 
+button{
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(.98);
+    }
+    
+    &:active:hover {
+        transform: scale(.95);
+    }
+}
 // -----------end of normal styles-------------
 
 @media only screen and (max-width: $breakpoint-md) {

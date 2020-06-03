@@ -23,14 +23,14 @@ function MainPageComponent(){
                 <div data-aos="zoom-out-left" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Mobile"></div>
                 <div data-aos="zoom-out-up" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Lady"></div>
                 
-                <div className="mainContentWrap">
-                    <h1 data-aos="fade-in" data-aos-duration="500" data-aos-delay="100">
+                <div className="mainContentWrap" data-aos="fade-in" data-aos-duration="500" data-aos-delay="100">
+                    <h1>
                         An all in one health and finance app for creators
                     </h1>
-                    <p className="alignCenter subTextWrap" data-aos="fade-in" data-aos-duration="500" data-aos-delay="200">
+                    <p className="alignCenter subTextWrap">
                         There've never been a time like this; A time where an app would be a lover, to people like you. We are making it more handy to control the money you make and the life you live.
                     </p>
-                    <button className="register" data-aos="fade-in" data-aos-duration="500" data-aos-delay="400" data-aos-offset="-100">
+                    <button className="register">
                         Register for early access
                     </button>
                 </div>
