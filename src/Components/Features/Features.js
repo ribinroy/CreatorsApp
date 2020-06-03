@@ -168,6 +168,9 @@ function FinanceContents(){
 
 function JoinPrivateBeta(){
     const [isFormOpened, changeFormOpened] = useState(false);
+    const [email, changeEmail] = useState("");
+    const [nickName, changeNickName] = useState("");
+    const [whatYouDo, changeWhatYouDo] = useState("");
 
     return (
         <section className="finalSection">
@@ -187,9 +190,18 @@ function JoinPrivateBeta(){
                     <div className={"joinArrow " + (isFormOpened?"active":"")} onClick={() => changeFormOpened(!isFormOpened)}></div>
                 </div>
                 {isFormOpened && <form className="joinerFormWrap" netlify>
-                                    <input className="joinerInput" type="email" name="Email" placeholder="You@example.com"/>
-                                    <input className="joinerInput"  type="text" name="Nickname" placeholder="Nickname"/>
-                                    <input className="joinerInput"  type="text" name="WhatYouDo" placeholder="What do you do"/>
+                                    <div className="joinerInputRelativeWrap">
+                                        <input className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
+                                        <label for="Email" className="joinerInputLabel">You@example.com</label>
+                                    </div>
+                                    <div className="joinerInputRelativeWrap">
+                                        <input className={"joinerInput " + (nickName === ""?"":"filled")}  type="text" name="Nickname" onChange={e => changeNickName(e.target.value)}/>
+                                        <label for="Email" className="joinerInputLabel">Nickname</label>
+                                    </div>
+                                    <div className="joinerInputRelativeWrap">
+                                        <input className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
+                                        <label for="Email" className="joinerInputLabel">What do you do</label>
+                                    </div>
                                     <button className="joinerSubmitButton" type="submit">Let's do this</button>
                                     <p>
                                         No unsolicited emails. No spam. No hits, just updates

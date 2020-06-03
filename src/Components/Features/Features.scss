@@ -308,24 +308,46 @@ $button-color: #9ACCFF;
                 }
             }
 
-            .joinerInput{
-                margin: 5px 0;
+            .joinerInputRelativeWrap{
                 min-width: 240px;
-                border: 1px solid $input-border-color;
-                border-radius: 4px;
-                padding: 3px 10px;
-                @include input-style();
+                position: relative;
+                margin-bottom: 10px;
 
-                &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                .joinerInput{
+                    margin: 5px 0;
+                    width: 100%;
+                    border: 1px solid $input-border-color;
+                    border-radius: 4px;
+                    padding: 3px 10px;
                     @include input-style();
+    
+                    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        @include input-style();
+                    }
+                    
+                    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                        @include input-style();
+                    }
+                    
+                    &::-ms-input-placeholder { /* Microsoft Edge */
+                        @include input-style();
+                    }
+    
+                    &:focus + .joinerInputLabel,
+                    &.filled + .joinerInputLabel{
+                        transform: translate(-10px, -20px);
+                        color: #fff;
+                        font-size: 12px;
+                    }
                 }
-                
-                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    
+                .joinerInputLabel{
                     @include input-style();
-                }
-                
-                &::-ms-input-placeholder { /* Microsoft Edge */
-                    @include input-style();
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    transition: all .3s;
+                    pointer-events: none;
                 }
             }
 
