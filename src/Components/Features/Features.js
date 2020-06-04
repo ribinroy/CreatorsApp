@@ -189,25 +189,24 @@ function JoinPrivateBeta(){
                     <div className="joinSubText">Join a bunch of your friends on our waitlist</div>
                     <div className={"joinArrow " + (isFormOpened?"active":"")} onClick={() => changeFormOpened(!isFormOpened)}></div>
                 </div>
-                {isFormOpened && <form className="joinerFormWrap" netlify>
-                                    <div className="joinerInputRelativeWrap">
-                                        <input className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
-                                        <label for="Email" className="joinerInputLabel">You@example.com</label>
-                                    </div>
-                                    <div className="joinerInputRelativeWrap">
-                                        <input className={"joinerInput " + (nickName === ""?"":"filled")}  type="text" name="Nickname" onChange={e => changeNickName(e.target.value)}/>
-                                        <label for="Email" className="joinerInputLabel">Nickname</label>
-                                    </div>
-                                    <div className="joinerInputRelativeWrap">
-                                        <input className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
-                                        <label for="Email" className="joinerInputLabel">What do you do</label>
-                                    </div>
-                                    <button className="joinerSubmitButton" type="submit">Let's do this</button>
-                                    <p>
-                                        No unsolicited emails. No spam. No hits, just updates
-                                    </p>
-                                </form>
-                }
+                <form className={"joinerFormWrap " + (isFormOpened?"active":"")}>
+                    <div className="joinerInputRelativeWrap">
+                        <input className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
+                        <label for="Email" className="joinerInputLabel">You@example.com</label>
+                    </div>
+                    <div className="joinerInputRelativeWrap">
+                        <input className={"joinerInput " + (nickName === ""?"":"filled")}  type="text" name="Nickname" onChange={e => changeNickName(e.target.value)}/>
+                        <label for="Email" className="joinerInputLabel">Nickname</label>
+                    </div>
+                    <div className="joinerInputRelativeWrap">
+                        <input className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
+                        <label for="Email" className="joinerInputLabel">What do you do</label>
+                    </div>
+                    <button className="joinerSubmitButton" type="submit">Let's do this</button>
+                    <p>
+                        No unsolicited emails. No spam. No hits, just updates
+                    </p>
+                </form>
             </div>
             <div className="halfPage secondHalf">
                 <p data-aos="zoom-in" data-aos-duration="500" data-aos-delay="170" data-aos-offset="-5">
