@@ -299,11 +299,13 @@ $button-color: #9ACCFF;
             animation: heightIncrease .4s 1;
             overflow: hidden;
             max-height: 0px;
-            transition: max-height .4s, padding .5s;
+            transition: max-height .4s, padding .5s, opacity .4s;
+            opacity: 0;
 
             &.active{
                 max-height: 400px;
                 padding: 15px 0;
+                opacity: 1;
             }
 
             @keyframes heightIncrease{
