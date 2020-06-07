@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./Features.scss"
 import { Container } from 'react-bootstrap';
+import Pricing from '../Pricing/Pricing.js';
 
 function HealthContents(){
     return (
@@ -174,7 +175,7 @@ function JoinPrivateBeta(){
 
     return (
         <section className="finalSection">
-            <div className="halfPage firstHalf">
+            <div className="halfPage firstHalf" id="Registration">
                 <div className="absoluteFlyingIcon popCorn" data-aos="zoom-out-down" data-aos-duration="900" data-aos-delay="170"></div>
                 <div className="absoluteFlyingIcon briefCase" data-aos="zoom-out-up" data-aos-duration="900" data-aos-delay="170"></div>
                 <div className="absoluteFlyingIcon beer" data-aos="zoom-out-left" data-aos-duration="900" data-aos-delay="170"></div>
@@ -192,15 +193,15 @@ function JoinPrivateBeta(){
                 <form className={"joinerFormWrap " + (isFormOpened?"active":"")}>
                     <div className="joinerInputRelativeWrap">
                         <input className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
-                        <label for="Email" className="joinerInputLabel">You@example.com</label>
+                        <label className="joinerInputLabel">You@example.com</label>
                     </div>
                     <div className="joinerInputRelativeWrap">
                         <input className={"joinerInput " + (nickName === ""?"":"filled")}  type="text" name="Nickname" onChange={e => changeNickName(e.target.value)}/>
-                        <label for="Email" className="joinerInputLabel">Nickname</label>
+                        <label className="joinerInputLabel">Nickname</label>
                     </div>
                     <div className="joinerInputRelativeWrap">
                         <input className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
-                        <label for="Email" className="joinerInputLabel">What do you do</label>
+                        <label className="joinerInputLabel">What do you do</label>
                     </div>
                     <button className="joinerSubmitButton" type="submit">Let's do this</button>
                     <p>
@@ -208,6 +209,7 @@ function JoinPrivateBeta(){
                     </p>
                 </form>
             </div>
+            <Pricing />
             <div className="halfPage secondHalf">
                 <p data-aos="zoom-in" data-aos-duration="500" data-aos-delay="170" data-aos-offset="-5">
                     FINANCE BENEFIT

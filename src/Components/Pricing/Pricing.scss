@@ -1,0 +1,238 @@
+@import "../../shared/shared.scss";
+
+$base-color: #5C54FF;
+$border-radius: 10px;
+
+.pricingTableWrap {
+    float: left;
+    width: 100%;
+    padding-top: 15px + $navigation-height;
+    
+    h3{
+        letter-spacing: -1.78px;
+    }
+
+    .detailWrap {
+        width: 50%;
+        float: left;
+    }
+
+    .tierWrap {
+        float: left;
+        width: 25%;
+    }
+
+    .heading{
+        float: left;
+        width: 100%;
+        
+        .detailWrap {
+            h3{
+                text-align: left;
+                padding: 15px 0;
+                padding-right: 10vmin;
+            }
+        }
+
+        .tierWrap {
+            border-top: 3px solid $base-color;
+            padding: 20px 0;
+            text-align: center;
+
+            h3{
+                position: relative;
+                padding-left: 55px;
+                display: inline;
+            }
+
+            h3:before{
+                content: "";
+                position: absolute;
+                background-image: url("../../shared/Images/Icons/Tier.png");
+                width: 55px;
+                height: 55px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                top: -2px;
+                left: 0px;
+            }
+
+            &.tier1{
+                border-left: 3px solid $base-color;
+                border-top-left-radius: $border-radius; 
+                background: $base-color;
+                
+                h3{
+                    color: #fff;
+                }
+            }
+
+            &.tier2{
+                border-right: 3px solid $base-color;
+                border-top-right-radius: $border-radius; 
+            }
+        }
+    }
+
+    .subHeading{
+        float: left;
+        width: 100%;
+
+        .detailWrap {
+            background-color: $base-color;
+            padding: 19.5px 15px;
+            border-top-left-radius: $border-radius;
+            border-right: 3px solid #fff;
+            padding-left: 45px;
+
+            h3{
+                text-align: left;
+                color: #fff;
+            }
+        }
+
+        .tierWrap {
+            background-color: $base-color;
+            padding: 10px 15px;
+
+            &:first-child{
+                border-right: 3px solid #fff;
+            }
+
+            &:last-child{
+                border-left: 3px solid #fff;
+            }
+
+            .perMonthText {
+                color: #fff;
+                text-align: center;
+                font-family: "Axiforma Regular";
+                font-size: 13px;
+            }
+
+            h3{
+                color: #fff;
+            }
+        }
+    }
+
+    .itemRow {
+        float: left;
+        width: 100%;
+        border-left: 3px solid $base-color;
+        border-right: 3px solid $base-color;
+        padding: 15px 0;
+
+        &.finalRow{
+            padding-bottom: 20px;
+            border-bottom: 3px solid $base-color;
+            border-radius: 0 0 0 $border-radius;
+        }
+
+        .detailWrap{
+            padding-left: 45px;
+            font-size: 1.8rem;
+            color: #212121;
+            opacity: 0.6;
+            font-family: "Axiforma Regular";
+            letter-spacing: -1.39px;
+        }
+
+        .tierWrap{
+            @include flex-row();
+
+            .tierIcon{
+                width: 35px;
+                height: 35px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                
+                &.available{
+                    width: 40px;
+                    height: 40px;
+                    background-image: url("../../shared/Images/Icons/available.png");
+                }
+
+                &.unavailable{
+                    background-image: url("../../shared/Images/Icons/unavailable.png");
+                }
+            }
+        }
+    }
+
+    .finalButtonWrap{
+        float: left;
+        width: 100%;
+
+        .detailWrap{
+            opacity: 0;
+        }
+
+        .tierWrap{
+            text-align: center;
+            font-size: 1.1rem;
+            font-family: "Axiforma Bold";
+            color: #fff;
+            padding: 15px 0;
+            cursor: pointer;
+            border-bottom: 3px solid $base-color;
+
+            &.tier1{
+                background: $base-color;
+                border-bottom-left-radius: $border-radius;
+            }
+
+            &.tier2{
+                color: $base-color;
+                border-bottom-right-radius: $border-radius;
+                border-right: 3px solid $base-color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+    .pricingTableWrap{
+        .heading{
+            .detailWrap{
+                width: 100%;
+                margin-bottom: 15px;
+
+                h3{
+                    text-align: center;
+                    padding: 0px;
+                }
+            }
+        }
+
+        .tierWrap{
+            width: 50%;
+        }
+
+        .subHeading,
+        .finalButtonWrap{
+            .detailWrap{
+                display: none;
+            }
+        }
+
+        .itemRow{
+            border-bottom: 1px solid $base-color;
+
+            .detailWrap{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+                padding: 0;
+                font-size: 1.5rem !important;
+            }
+
+            &.finalRow{
+                border-radius: 0;
+            }
+        }
+    }
+}

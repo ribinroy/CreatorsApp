@@ -7,8 +7,8 @@ import 'aos/dist/aos.css';
 function NavigationBar(){
     const [isHamburgerClicked, hamBurgerClicked] = useState(false);
     const [menuLinks] = useState([{key: 1, name:"Say Hi", link: "/#"},
-                                    {key: 2, name:"Pricing", link: "/#"},
-                                    {key: 3, name:"Register", link: "/#"}]);
+                                    {key: 2, name:"Pricing", link: "#Pricing"},
+                                    {key: 3, name:"Register", link: "#Registration"}]);
 
     useEffect(() => {
         // componentdidmount
