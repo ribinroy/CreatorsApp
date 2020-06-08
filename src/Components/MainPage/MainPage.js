@@ -30,9 +30,9 @@ function MainPageComponent(){
                     <p className="alignCenter subTextWrap">
                         There've never been a time like this; A time where an app would be a lover, to people like you. We are making it more handy to control the money you make and the life you live.
                     </p>
-                    <button className="register">
+                    <a className="register button" href="#Registration">
                         Register for early access
-                    </button>
+                    </a>
                 </div>
                 <div className="bottomContentWrap" data-aos="fade-in" data-aos-duration="600" data-aos-delay="500" data-aos-offset="-100">
                     <h4>We partner with the best</h4>

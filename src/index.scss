@@ -167,7 +167,8 @@ ul{
     height: inherit;
 }
 
-button{
+button,
+.button{
     transition: transform .3s;
 
     &:hover {
