@@ -15,7 +15,7 @@ const pricingDetails = [
 function Pricing(){
     return (
         <div className="pricingTableWrap" id="Pricing">
-            <div className="heading"  data-aos="fade-in" data-aos-duration="400" data-aos-delay="100" data-aos-offset="10">
+            <div className="heading"  data-aos="fade-in" data-aos-duration="800" data-aos-delay="100" data-aos-offset="10">
                 <div className="detailWrap">
                     <h3>Pricing That Fits Your Purse</h3>
                 </div>
@@ -26,7 +26,7 @@ function Pricing(){
                     <h3>Tier II</h3>
                 </div>
             </div>
-            <div className="subHeading"  data-aos="fade-in" data-aos-duration="500" data-aos-delay="100" data-aos-offset="10">
+            <div className="subHeading"  data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100" data-aos-offset="10">
                 <div className="detailWrap">
                     <h3>You Enjoy:</h3>
                 </div>
@@ -42,7 +42,7 @@ function Pricing(){
             {   
                 pricingDetails.map(function(object, i){
                    return (
-                        <div key={i} className={"itemRow " + (pricingDetails.length <= i+1? "finalRow":"")} data-aos="fade-in" data-aos-duration="200" data-aos-delay={i * 50} data-aos-offset="10">
+                        <div key={i} className={"itemRow " + (pricingDetails.length <= i+1? "finalRow":"")} data-aos="fade-in" data-aos-duration="500" data-aos-delay={i * 50} data-aos-offset="10">
                             <div className="detailWrap">{object.item}</div>
                             <div className="tierWrap">
                                 <div className={"tierIcon " + (object.tier1?"available":"unavailable")}></div>
@@ -54,7 +54,7 @@ function Pricing(){
                    )
                 })
             }
-            <div className="finalButtonWrap" data-aos="fade-in" data-aos-duration="400" data-aos-delay="100" data-aos-offset="10">
+            <div className="finalButtonWrap" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100" data-aos-offset="10">
                 <div className="detailWrap">.</div>
                 <div className="tierWrap tier1">
                     Start 14days Trial

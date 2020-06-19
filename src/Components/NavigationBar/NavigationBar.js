@@ -30,7 +30,7 @@ function NavigationBar(){
                     }
                     {!isHamburgerClicked &&
                         <Col xs={10} lg={2} className="noPadding">
-                            <div className="creatorsAppLogo"></div>
+                            <a href="/#"><div className="creatorsAppLogo"></div></a>
                         </Col>
                     }
                     {!isHamburgerClicked &&

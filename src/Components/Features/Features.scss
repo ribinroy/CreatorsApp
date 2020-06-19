@@ -114,7 +114,7 @@ $button-color: #9ACCFF;
     width: 100%;
     // height: calc(50vh - 15px);
     float: left;
-    margin-top: 30px;
+    margin-top: 15vh;
     // padding: 40px 0;
     box-sizing: border-box;
 
@@ -320,14 +320,15 @@ $button-color: #9ACCFF;
             .joinerInputRelativeWrap{
                 min-width: 240px;
                 position: relative;
-                margin-bottom: 10px;
+                margin-bottom: 16px;
 
                 .joinerInput{
-                    margin: 5px 0;
+                    margin: 0;
                     width: 100%;
                     border: 1px solid $input-border-color;
                     border-radius: 4px;
                     padding: 3px 10px;
+                    height: 35px;
                     @include input-style();
     
                     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -344,9 +345,9 @@ $button-color: #9ACCFF;
     
                     &:focus + .joinerInputLabel,
                     &.filled + .joinerInputLabel{
-                        transform: translate(-10px, -20px);
+                        transform: translate(-10px, -21px);
                         color: #fff;
-                        font-size: 12px;
+                        font-size: 11px;
                     }
                 }
     
@@ -354,7 +355,7 @@ $button-color: #9ACCFF;
                     @include input-style();
                     position: absolute;
                     left: 10px;
-                    top: 10px;
+                    top: 8px;
                     transition: all .3s;
                     pointer-events: none;
                 }
@@ -436,7 +437,8 @@ $button-color: #9ACCFF;
             flex-direction: column;
             padding: 0;
             align-items: center;
-            margin-bottom: 10vh;
+            margin-bottom: 15vh;
+            margin-top: 15vh;
             
             h1,
             p{

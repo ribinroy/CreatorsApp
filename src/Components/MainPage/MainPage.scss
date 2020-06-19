@@ -20,6 +20,7 @@ $button-color: #FFFFFF;
     padding: 0 7rem;
     @include flex-column();
     position: relative;
+    min-height: calc(100vh - #{$navigation-height});
 }
 
 .bottomContentWrap {
@@ -47,7 +48,7 @@ $button-color: #FFFFFF;
     width: 61vh;
     float: left;
     display: block;
-    margin: 15px 0 !important;
+    margin: 45px 0 !important;
 }
 
 .register {
