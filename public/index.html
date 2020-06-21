@@ -42,4 +42,23 @@
         transform: scale(1.2);
     }
 }
+
+#initialLoader:before {
+    content: "";
+    position: absolute;
+    border-top: 3px solid #0AACFE;
+    border-left: 3px solid #1f86f1;
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    animation: rotate 1s infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes rotate{
+    from{
+        transform: rotate(360deg)
+    }
+}
 </style>
