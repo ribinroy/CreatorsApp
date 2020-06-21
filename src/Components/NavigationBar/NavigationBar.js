@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from "react"
 import "./NavigationBar.scss"
 import { Col, Container, Row } from 'react-bootstrap';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function NavigationBar(){
@@ -15,10 +14,6 @@ function NavigationBar(){
         
     useEffect(() => {
         // componentdidmount
-        AOS.init({
-            duration : 2000
-        })
-
         window.addEventListener('resize', function(){
             hamBurgerClicked(false);
         })
@@ -33,7 +28,7 @@ function NavigationBar(){
                     }
                     {!isHamburgerClicked &&
                         <Col xs={10} lg={2} className="noPadding">
-                            <a href="/#"><div className="creatorsAppLogo"></div></a>
+                            <a href="/#Home"><div className="creatorsAppLogo"></div></a>
                         </Col>
                     }
                     {!isHamburgerClicked &&

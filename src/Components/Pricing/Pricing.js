@@ -54,7 +54,7 @@ function Pricing(){
                    )
                 })
             }
-            <div className="finalButtonWrap" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100" data-aos-offset="10">
+            <div className="finalButtonWrap" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400" data-aos-offset="10">
                 <div className="detailWrap">.</div>
                 <div className="tierWrap tier1">
                     Start 14days Trial

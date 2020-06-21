@@ -2,11 +2,11 @@ import React from "react"
 import "./MainPage.scss"
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
-import { Container } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 
 function MainPageComponent(){
     return (
-        <div className="onePage">
+        <div className="onePage" id="Home">
             <Container className="flexRow">
                 <div className="mainContentWrap" data-aos="fade-in" data-aos-duration="650" data-aos-delay="100">
                     <div data-aos="zoom-out-down" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Monitor"></div>
@@ -35,8 +35,13 @@ function MainPageComponent(){
                     </a>
                 </div>
                 <div className="bottomContentWrap" data-aos="fade-in" data-aos-duration="800" data-aos-delay="500" data-aos-offset="-100">
-                    <h4>We partner with the best</h4>
-                    <div className="partnersWrap"></div>
+                    <h4 data-aos="fade-in" data-aos-duration="850" data-aos-delay="0">We partner with the best</h4>
+                    <div className="partnersWrap">
+                        <div md={3} lg={3} xs={6} className="partnerLogo" style={{ backgroundImage: `url(${require("../../shared/Images/Partners/Logo1.png")})`}} data-aos="fade-in" data-aos-duration="850" data-aos-delay="100"></div>
+                        <div md={3} lg={3} xs={6} className="partnerLogo" style={{ backgroundImage: `url(${require("../../shared/Images/Partners/Logo2.png")})`}} data-aos="fade-in" data-aos-duration="850" data-aos-delay="200"></div>
+                        <div md={3} lg={3} xs={6} className="partnerLogo" style={{ backgroundImage: `url(${require("../../shared/Images/Partners/Logo3.png")})`}} data-aos="fade-in" data-aos-duration="850" data-aos-delay="300"></div>
+                        <div md={3} lg={3} xs={6} className="partnerLogo" style={{ backgroundImage: `url(${require("../../shared/Images/Partners/Logo4.png")})`}} data-aos="fade-in" data-aos-duration="850" data-aos-delay="400"></div>
+                    </div>
                 </div>
             </Container>
         </div>

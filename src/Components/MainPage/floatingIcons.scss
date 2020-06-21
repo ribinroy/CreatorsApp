@@ -7,6 +7,7 @@
     min-height: 30px;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: -1;
     background-position: center;
 
     $images: "Money", "Aesthetics", "Search", "PuppyEmoji", "Puppy", "Lady", "Drink", "ClipBoard", "Car", "BirthdayPup", "Burger", "Monitor", "WheelChair", "Mobile"; //all the names if the images to be displayed
@@ -62,28 +63,28 @@
     }
     
     &.WheelChair {
-        left: 9%;
-        bottom: 30%;
+        left: 7%;
+        bottom: 25%;
     }
     
     &.Monitor {
-        bottom: 19%;
+        bottom: 12%;
         left: 25%;
     }
     
     &.Burger {
-        bottom: 18%;
+        bottom: 4%;
         left: 46%;
     }
     
     &.Lady {
-        right: 5%;
-        bottom: 22%;
+        right: 4%;
+        bottom: 11%;
     }
     
     &.Mobile {
         right: 27%;
-        bottom: 20%;
+        bottom: 18%;
     }
 }
 

@@ -12,7 +12,7 @@ function HealthContents(){
                         <h3>Have Access To 24/7 Medical Hotline Interaction</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Health Items/First.png")} alt="Health Benefit 1" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Health Items/First.png")})`}} alt="Health Benefit 1"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -31,7 +31,7 @@ function HealthContents(){
                         <h3>Health Benefits That Covers For The Whole Family</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Health Items/Second.png")} alt="Health Benefit 2" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Health Items/Second.png")})`}} alt="Health Benefit 2"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -50,7 +50,7 @@ function HealthContents(){
                         <h3>Monitor Your Health With A Visually Pleasing Patient Portal</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Health Items/Third.png")} alt="Health Benefit 3" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Health Items/Third.png")})`}} alt="Health Benefit 3"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -76,7 +76,7 @@ function HealthContents(){
                         <h3>Mobile Health Features For Your Pets</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Health Items/Forth.png")} alt="Health Benefit 4" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Health Items/Forth.png")})`}} alt="Health Benefit 4"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -95,7 +95,7 @@ function HealthContents(){
                         <h3>Unlimited Doctor Communication Through Video Chats (teleheath)</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Health Items/Fifth.png")} alt="Health Benefit 5" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Health Items/Fifth.png")})`}} alt="Health Benefit 5"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -107,7 +107,7 @@ function HealthContents(){
                         <h3>Get Prescribe Medication Through Virtual Visits With Med Off.</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Health Items/Sixth.png")} alt="Health Benefit 6" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Health Items/Sixth.png")})`}} alt="Health Benefit 6"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -126,7 +126,7 @@ function FinanceContents(){
                         <h3>Seamless And Swift Payment Method</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Finance Items/First.png")} alt="Finance Benefit 1" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Finance Items/First.png")})`}} alt="Finance Benefit 1"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -138,7 +138,7 @@ function FinanceContents(){
                         <h3>Spreadsheet That Is Smarter Than A Spreadsheet.</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Finance Items/Second.png")} alt="Finance Benefit 2" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Finance Items/Second.png")})`}} alt="Finance Benefit 2"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -150,7 +150,7 @@ function FinanceContents(){
                         <h3>Create Professional Ready-To-Go Invoices For Free</h3>
                     </div>
                     <div className="featureContentImageWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-offset="10">
-                        <img className="featureImage" src={require("../../shared/Images/Finance Items/Third.png")} alt="Finance Benefit 3" />
+                        <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Finance Items/Third.png")})`}} alt="Finance Benefit 3"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
                         <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
@@ -172,6 +172,9 @@ function JoinPrivateBeta(){
     const [email, changeEmail] = useState("");
     const [nickName, changeNickName] = useState("");
     const [whatYouDo, changeWhatYouDo] = useState("");
+    const [registerCompeted, changeRegisterCompeted] = useState(false);
+    
+    
 
     return (
         <section className="finalSection">
@@ -203,7 +206,12 @@ function JoinPrivateBeta(){
                         <input className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
                         <label className="joinerInputLabel">What do you do</label>
                     </div>
-                    <button className="joinerSubmitButton" type="submit">Let's do this</button>
+                    <button className="joinerSubmitButton" type="submit" onClick={(e) => {e.preventDefault(); changeRegisterCompeted(true);}}>Let's do this</button>
+                    {registerCompeted && <div className="registeredPrompt">
+                        <p>
+                            Awesome! Keep an eye on your email, we'll reach
+                        </p>
+                    </div>}
                     <p>
                         No unsolicited emails. No spam. No hits, just updates
                     </p>

@@ -170,6 +170,11 @@ $button-color: #9ACCFF;
             object-fit: contain;
             padding: 10px;
             object-position: center;
+            min-width: 100%;
+            min-height: 410px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     }
     
@@ -213,9 +218,10 @@ $button-color: #9ACCFF;
             margin-top: -5px;
             cursor: pointer;
             transition: opacity .4s;
+            opacity: .8;
 
             &:hover{
-                opacity: .6;
+                opacity: 1;
             }
         }
 
@@ -388,6 +394,16 @@ $button-color: #9ACCFF;
                 font-family: "Axiforma Regular";
                 letter-spacing: -0.59px;
                 margin: 10px 0 25px 0 !important;
+            }
+
+            .registeredPrompt {
+                float: left;
+
+                p{
+                    margin-bottom: 5px !important;
+                    margin-top: 15px !important;
+                    animation: dropDown .4s 1;
+                }
             }
         }
     } 
@@ -562,6 +578,17 @@ $button-color: #9ACCFF;
                     right: -1% !important;
                     bottom: 12% !important;
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+    .featureContentItemWrap{
+        .featureContentImageWrap{
+            .featureImage{
+                min-width: calc(100% - 50px);
+                min-height: 45vh;
             }
         }
     }
