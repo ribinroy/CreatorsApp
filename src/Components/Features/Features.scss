@@ -293,6 +293,10 @@ $button-color: #9ACCFF;
                     transform: rotate(180deg);
                     bottom: -12px;
                 }
+
+                &.hideArrow{
+                    transform: rotate(180deg) scale(0) !important;
+                }
             }
         }
 
@@ -406,15 +410,30 @@ $button-color: #9ACCFF;
                 }
             }
         }
+
+        .registeredPrompt {
+            float: left;
+            width: 100%;
+            margin: 10px 0;
+            animation: dropDown .4s 1;
+
+            p {
+                color: #fff;
+                text-align: center;
+                font-size: 12px;
+                font-family: "Axiforma Regular";
+                letter-spacing: -.59px;
+                animation: dropDown .4s 1;
+            }
+        }
     } 
     
     .halfPage{
         padding: 0 5vw;
 
         &.firstHalf{
-            padding-top: 50px;
+            padding-top: calc(50px + 10vh);
             position: relative;
-            margin-top: 10vh;
 
             .absoluteFlyingIcon{
                 width: 100px;

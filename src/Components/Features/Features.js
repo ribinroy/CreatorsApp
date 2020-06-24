@@ -191,9 +191,9 @@ function JoinPrivateBeta(){
                 <div className="joinUpperDetailsWrap">
                     <div className="joinMainText">Join our Private Beta</div>
                     <div className="joinSubText">Join a bunch of your friends on our waitlist</div>
-                    <div className={"joinArrow " + (isFormOpened?"active":"")} onClick={() => changeFormOpened(!isFormOpened)}></div>
+                    <div className={"joinArrow " + (isFormOpened?"active":"") + (registerCompeted?" hideArrow":"")} onClick={() => changeFormOpened(!isFormOpened)}></div>
                 </div>
-                <form className={"joinerFormWrap " + (isFormOpened?"active":"")}>
+                <form className={"joinerFormWrap " + ((isFormOpened && !registerCompeted)?"active":"")}>
                     <div className="joinerInputRelativeWrap">
                         <input className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
                         <label className="joinerInputLabel">You@example.com</label>
@@ -207,15 +207,15 @@ function JoinPrivateBeta(){
                         <label className="joinerInputLabel">What do you do</label>
                     </div>
                     <button className="joinerSubmitButton" type="submit" onClick={(e) => {e.preventDefault(); changeRegisterCompeted(true);}}>Let's do this</button>
-                    {registerCompeted && <div className="registeredPrompt">
-                        <p>
-                            Awesome! Keep an eye on your email, we'll reach
-                        </p>
-                    </div>}
                     <p>
                         No unsolicited emails. No spam. No hits, just updates
                     </p>
                 </form>
+                {registerCompeted && <div className="registeredPrompt">
+                    <p>
+                        Awesome! Keep an eye on your email, we'll reach
+                    </p>
+                </div>}
             </div>
             <Pricing />
             <div className="halfPage secondHalf">

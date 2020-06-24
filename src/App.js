@@ -7,11 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 
 function loadCompleted(){
-    document.getElementById("initialLoader").remove();
-    document.getElementById("root").style.display = "block"
-    AOS.init({
-        duration : 2000
-    })
+    setTimeout(function(){
+        document.getElementById("initialLoader").remove();
+        document.getElementById("root").style.display = "block"
+        AOS.init({
+            duration : 2000
+        })
+    }, 1100)
 }
 
 export default function App() {

@@ -1,4 +1,36 @@
 .flexRow .absoluteFlyingIcon{
+    &:nth-child(odd) {
+        animation: parallax1 2s infinite alternate;
+    }
+    
+    &:nth-child(even) {
+        animation: parallax2 2s infinite alternate;
+    }
+    
+    @keyframes parallax1{
+        from{
+            transform: translate(0%);
+        }
+        to{
+            transform: translate(25%);
+        }
+    }
+    
+    @keyframes parallax2{
+        from{
+            transform: translate(0%, 0%);
+        }
+        to{
+            transform: translate(0%, 25%);
+        }
+    }
+
+    @for $i from 1 through 3 {
+        &:nth-child( #{$i}) {
+            animation-delay: $i * .6s;
+        }
+    }
+
     position: absolute;
     // background-image: url("../../shared/Images/Icons/Home/Money.png");
     width: 4vmin;
