@@ -120,13 +120,15 @@
 
 @media only screen and (max-width: $breakpoint-md) {
     .flexRow .absoluteFlyingIcon{
+        background-size: 8vmin;
+        
         &.Monitor {
-            background-position-y: -14% !important;
+            background-position-y: 86% !important;
             background-position-x: 6% !important;
         }
         
         &.Car {
-            background-position-x: -9% !important;
+            background-position-x: 91% !important;
         }
         
         &.BirthdayPup {
@@ -134,11 +136,11 @@
         }
         
         &.Drink {
-            background-position-x: -3% !important;
+            background-position-x: 97% !important;
         }
         
         &.Search {
-            background-position-x: -0% !important;
+            background-position-x: 100% !important;
         }
         
         &.ClipBoard {

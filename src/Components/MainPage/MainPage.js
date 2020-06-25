@@ -9,7 +9,6 @@ function MainPageComponent(){
     useEffect(() =>{
         const scene = document.getElementById('parallaxWrap');
         window.parallaxInstance = new Parallax(scene);
-        debugger;
     })
 
     return (
@@ -17,20 +16,20 @@ function MainPageComponent(){
             <Container className="flexRow">
                 <div className="mainContentWrap" data-aos="fade-in" data-aos-duration="650" data-aos-delay="100">
                     <div className="inherit" id="parallaxWrap" data-relative-input="true">
-                        <div data-depth=".15" className="absoluteFlyingIcon Monitor"></div>
+                        <div data-depth=".04" className="absoluteFlyingIcon Monitor"></div>
                         <div data-depth=".05" className="absoluteFlyingIcon WheelChair"></div>
-                        <div data-depth=".15" className="absoluteFlyingIcon Car"></div>
-                        <div data-depth=".11" className="absoluteFlyingIcon BirthdayPup"></div>
+                        <div data-depth=".04" className="absoluteFlyingIcon Car"></div>
+                        <div data-depth=".07" className="absoluteFlyingIcon BirthdayPup"></div>
                         <div data-depth=".08" className="absoluteFlyingIcon Drink"></div>
-                        <div data-depth=".15" className="absoluteFlyingIcon Search"></div>
+                        <div data-depth=".04" className="absoluteFlyingIcon Search"></div>
                         <div data-depth=".08" className="absoluteFlyingIcon Money"></div>
-                        <div data-depth=".15" className="absoluteFlyingIcon Puppy"></div>
-                        <div data-depth=".11" className="absoluteFlyingIcon ClipBoard"></div>
-                        <div data-depth=".15" className="absoluteFlyingIcon PuppyEmoji"></div>
-                        <div data-depth=".15" className="absoluteFlyingIcon Aesthetics"></div>
+                        <div data-depth=".04" className="absoluteFlyingIcon Puppy"></div>
+                        <div data-depth=".07" className="absoluteFlyingIcon ClipBoard"></div>
+                        <div data-depth=".04" className="absoluteFlyingIcon PuppyEmoji"></div>
+                        <div data-depth=".04" className="absoluteFlyingIcon Aesthetics"></div>
                         <div data-depth=".05" className="absoluteFlyingIcon Burger"></div>
-                        <div data-depth=".15" className="absoluteFlyingIcon Mobile"></div>
-                        <div data-depth=".11" className="absoluteFlyingIcon Lady"></div>
+                        <div data-depth=".04" className="absoluteFlyingIcon Mobile"></div>
+                        <div data-depth=".07" className="absoluteFlyingIcon Lady"></div>
                     </div>
                     <h1>
                         An all in one health and finance app for creators
