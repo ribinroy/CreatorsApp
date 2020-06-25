@@ -1,10 +1,10 @@
 .flexRow .absoluteFlyingIcon{
     &:nth-child(odd) {
-        animation: parallax1 2s infinite alternate;
+        // animation: parallax1 2s infinite alternate;
     }
     
     &:nth-child(even) {
-        animation: parallax2 2s infinite alternate;
+        // animation: parallax2 2s infinite alternate;
     }
     
     @keyframes parallax1{
@@ -12,7 +12,7 @@
             transform: translate(0%);
         }
         to{
-            transform: translate(25%);
+            transform: translate(1%);
         }
     }
     
@@ -21,7 +21,7 @@
             transform: translate(0%, 0%);
         }
         to{
-            transform: translate(0%, 25%);
+            transform: translate(0%, 1%);
         }
     }
 
@@ -31,16 +31,14 @@
         }
     }
 
-    position: absolute;
-    // background-image: url("../../shared/Images/Icons/Home/Money.png");
-    width: 4vmin;
-    height: 4vmin;
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
     min-width: 30px;
     min-height: 30px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 4vmin;
     z-index: -1;
-    background-position: center;
 
     $images: "Money", "Aesthetics", "Search", "PuppyEmoji", "Puppy", "Lady", "Drink", "ClipBoard", "Car", "BirthdayPup", "Burger", "Monitor", "WheelChair", "Mobile"; //all the names if the images to be displayed
     @each $image in $images {
@@ -50,110 +48,110 @@
     }
 
     &.Aesthetics {
-        left: 10%;
-        top: 10%;
+        background-position-x: 10%;
+        background-position-y:  10%;
     }
     
     &.PuppyEmoji {
-        left: 31%;
-        top: 2%;
+        background-position-x: 31%;
+        background-position-y:  2%;
     }
     
     &.ClipBoard {
-        left: 50%;
-        top: 2%;
+        background-position-x: 50%;
+        background-position-y:  2%;
     }
     
     &.Puppy {
-        right: 4%;
-        top: 5%;
+        background-position-x: 96%;
+        background-position-y:  5%;
     }
     
     &.Money {
-        left: 5%;
-        top: 35%;
+        background-position-x: 5%;
+        background-position-y:  35%;
     }
     
     &.Search {
-        right: 8%;
-        top: 22%;
+        background-position-x: 92%;
+        background-position-y:  22%;
     }
     
     &.Drink {
-        right: 0%;
-        top: 34%;
+        background-position-x: 100%;
+        background-position-y:  34%;
     }
     
     &.BirthdayPup {
-        left: 20%;
-        top: 53%;
+        background-position-x: 20%;
+        background-position-y:  53%;
     }
     
     &.Car {
-        right: 12%;
-        top: 54%;
+        background-position-x: 88%;
+        background-position-y:  54%;
     }
     
     &.WheelChair {
-        left: 7%;
-        bottom: 25%;
+        background-position-x: 7%;
+        background-position-y: 75%;
     }
     
     &.Monitor {
-        bottom: 12%;
-        left: 25%;
+        background-position-y: 88%;
+        background-position-x: 25%;
     }
     
     &.Burger {
-        bottom: 4%;
-        left: 46%;
+        background-position-y: 96%;
+        background-position-x: 46%;
     }
     
     &.Lady {
-        right: 4%;
-        bottom: 11%;
+        background-position-x: 96%;
+        background-position-y: 89%;
     }
     
     &.Mobile {
-        right: 27%;
-        bottom: 18%;
+        background-position-x: 83%;
+        background-position-y: 82%;
     }
 }
 
 @media only screen and (max-width: $breakpoint-md) {
     .flexRow .absoluteFlyingIcon{
         &.Monitor {
-            bottom: 14% !important;
-            left: 6% !important;
+            background-position-y: -14% !important;
+            background-position-x: 6% !important;
         }
         
         &.Car {
-            right: 9% !important;
+            background-position-x: -9% !important;
         }
         
         &.BirthdayPup {
-            left: 2% !important;
+            background-position-x: 2% !important;
         }
         
         &.Drink {
-            right: 3% !important;
+            background-position-x: -3% !important;
         }
         
         &.Search {
-            right: 0% !important;
+            background-position-x: -0% !important;
         }
         
         &.ClipBoard {
-            top: 0% !important;
+            background-position-y:  0% !important;
         }
         
         &.PuppyEmoji {
-            top: 1% !important;
-            left: 23% !important;
+            background-position-y:  1% !important;
+            background-position-x: 23% !important;
         }
         
         &.Aesthetics {
-            left: 9% !important;
+            background-position-x: 9% !important;
         }
     }
 }
