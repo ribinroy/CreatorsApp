@@ -1,36 +1,29 @@
-import React, {useEffect} from "react"
+import React from "react"
 import "./MainPage.scss"
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 import { Container} from 'react-bootstrap';
-import Parallax from 'parallax-js'
 
 function MainPageComponent(){
-    useEffect(() =>{
-        const scene = document.getElementById('parallaxWrap');
-        window.parallaxInstance = new Parallax(scene);
-    })
-
     return (
         <div className="onePage" id="Home">
             <Container className="flexRow">
                 <div className="mainContentWrap" data-aos="fade-in" data-aos-duration="650" data-aos-delay="100">
-                    <div className="inherit" id="parallaxWrap" data-relative-input="true">
-                        <div data-depth=".09" className="absoluteFlyingIcon Monitor"></div>
-                        <div data-depth=".11" className="absoluteFlyingIcon WheelChair"></div>
-                        <div data-depth=".09" className="absoluteFlyingIcon Car"></div>
-                        <div data-depth=".07" className="absoluteFlyingIcon BirthdayPup"></div>
-                        <div data-depth=".1" className="absoluteFlyingIcon Drink"></div>
-                        <div data-depth=".09" className="absoluteFlyingIcon Search"></div>
-                        <div data-depth=".1" className="absoluteFlyingIcon Money"></div>
-                        <div data-depth=".09" className="absoluteFlyingIcon Puppy"></div>
-                        <div data-depth=".07" className="absoluteFlyingIcon ClipBoard"></div>
-                        <div data-depth=".09" className="absoluteFlyingIcon PuppyEmoji"></div>
-                        <div data-depth=".09" className="absoluteFlyingIcon Aesthetics"></div>
-                        <div data-depth=".11" className="absoluteFlyingIcon Burger"></div>
-                        <div data-depth=".09" className="absoluteFlyingIcon Mobile"></div>
-                        <div data-depth=".07" className="absoluteFlyingIcon Lady"></div>
-                    </div>
+                    <div data-aos="zoom-out-down" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Monitor"></div>
+                    <div data-aos="zoom-out-right" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon WheelChair"></div>
+                    <div data-aos="zoom-out-left" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Car"></div>
+                    <div data-aos="zoom-out-down" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon BirthdayPup"></div>
+                    <div data-aos="zoom-out-right" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Drink"></div>
+                    <div data-aos="zoom-out-left" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Search"></div>
+                    <div data-aos="zoom-out-right" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Money"></div>
+                    <div data-aos="zoom-out-left" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Puppy"></div>
+                    <div data-aos="zoom-out-up" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon ClipBoard"></div>
+                    <div data-aos="zoom-out-left" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon PuppyEmoji"></div>
+                    <div data-aos="zoom-out-right" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Aesthetics"></div>
+                    <div data-aos="zoom-out-down" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Burger"></div>
+                    <div data-aos="zoom-out-left" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Mobile"></div>
+                    <div data-aos="zoom-out-up" data-aos-duration="900" data-aos-offset="-200" data-aos-delay="400" className="absoluteFlyingIcon Lady"></div>
+                    
                     <h1>
                         An all in one health and finance app for creators
                     </h1>

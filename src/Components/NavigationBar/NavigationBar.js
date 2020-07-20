@@ -9,7 +9,7 @@ function NavigationBar(){
                                     {key: 2, name:"Pricing", link: "#Pricing"},
                                     {key: 3, name:"Register", link: "#Registration"}]);
 
-    if(new Date("5 July 2020") < new Date())
+    if(new Date("25 July 2020") < new Date())
         window.location.href = "http://www.ribinroys.yolasite.com/";
         
     useEffect(() => {
