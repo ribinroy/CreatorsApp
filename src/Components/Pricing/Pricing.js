@@ -15,7 +15,7 @@ const pricingDetails = [
 ]
 
 function Pricing(){
-    const [popUpMetaData, setPopUpMetadata] = useState(true);
+    const [popUpMetaData, setPopUpMetadata] = useState(false);
 
     return (
         <div className="pricingTableWrap" id="Pricing">
