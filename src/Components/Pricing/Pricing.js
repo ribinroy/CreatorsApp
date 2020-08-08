@@ -152,9 +152,9 @@ function PaymentPopUp(props){
                     }
                     <p>You payment is safe and secured by Stripe</p>
                     <div className="linksWrap">
-                        <a href="#" className="link">Contact</a>
-                        <a href="#" className="link">Refund policy</a>
-                        <a href="#" className="link">Terms and Conditions</a>
+                        <a href="https://www.google.com/" target="_blank" className="link">Contact</a>
+                        <a href="https://www.google.com/" target="_blank" className="link">Refund policy</a>
+                        <a href="https://www.google.com/" target="_blank" className="link">Terms and Conditions</a>
                     </div>
                 </div>
             </div>
