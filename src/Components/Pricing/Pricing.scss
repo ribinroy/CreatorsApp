@@ -2,6 +2,7 @@
 
 $base-color: #5C54FF;
 $border-radius: 10px;
+$grey-color: #E6E5ED;
 
 .pricingTableWrap {
     float: left;
@@ -197,6 +198,297 @@ $border-radius: 10px;
     }
 }
 
+.popUpOverlay {
+    position: fixed;
+    left: 0;
+    top: $navigation-height;
+    width: 100%;
+    height: calc(100% - #{$navigation-height});
+    background: rgba(130, 128, 165, .6);
+    z-index: 10;
+    @include flex-row();
+    animation: popupOverlayAnime .4s 1;
+    pointer-events: none;
+    
+    @keyframes popupOverlayAnime{
+        from{
+            background: rgba(130, 128, 165, 0);
+        }
+        to{
+            background: rgba(130, 128, 165, .6);
+        }
+    }
+
+    .popUpWrap {
+        width: 400px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        animation: slideBottomToTop1 .4s 1;
+        pointer-events: all;
+        box-shadow: 0px 0px 20px rgba(130, 128, 165, 1);
+
+        .header {
+            @include flex-row();
+            position: relative;
+
+            .closeButton {
+                position: absolute;
+                right: 13px;
+                color: #DEDEDE;
+                cursor: pointer;
+            }
+
+            .headerItem {
+                height: 70px;
+                background: $base-color;
+                flex: 1;
+                @include flex-column();
+
+                &:first-child{
+                    border-right: 2px solid #fff;
+
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        background-image: url("../../shared/Images/Icons/Tier.png");
+                        width: 30px;
+                        height: 30px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        top: 18px;
+                        left: 27px;
+                    }
+                }
+
+                h3{
+                    color: #fff;
+                    font-size: 30px !important;
+                }
+            }
+
+            .tierRate{
+                h3{
+                    margin-bottom: 3px;
+                }
+
+                p{
+                    color: #fff;
+                    font-size: 10px;
+                    text-align: center;
+                    font-weight: normal !important;
+
+                }
+            }
+        }
+
+        .body{
+            text-align: center;
+            color:#05024B;
+            padding: 30px 40px;
+            box-sizing: border-box;
+
+            h4{
+                color:#05024B;
+                font-size: 16px !important;
+            }
+
+            p{
+                font-size: 10px;
+            }
+
+            .cardDetailsWrap{
+                margin-top: 25px;
+
+                .payingTypeWrap{
+                    @include flex-row();
+                    justify-content: space-around;
+
+                    .inputRadioLabel{
+                        position: relative;
+
+
+                        input[type="radio"] {
+                            opacity: 0;
+
+                            &:checked ~ span:before{
+                                border: 4px solid #00C48C;
+                            }
+
+                            & ~ span:before {
+                                width: 13px;
+                                height: 13px;
+                                border-radius: 50%;
+                                border: 1px solid #000;
+                                content: "";
+                                position: absolute;
+                                left: -3px;
+                                top: 6px;
+                            }
+                        }
+                        
+                        span{
+                            margin-top: -1px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .cardDetails{
+                    margin-bottom: 35px;
+
+                    .inputField{
+                        border: 1px solid $grey-color;
+                        border-radius: 5px;
+                        padding: 10px 15px;
+                        width:100%;
+                        font-size: 13px;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                    }
+
+                    .inputLabel{
+                        position:relative;
+                        
+                        &.cardNumber{
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+
+                        &.cardExpiry,
+                        &.cardCVV{
+                            width: calc(50% - 3px);
+                            float: left;
+                        }
+
+                        &.cardCVV{
+                            float: right;
+                        }
+
+                        &:before{
+                            position: absolute;
+                            content: "";
+                            width: 30px;
+                            height: calc(100% - 7px);
+                            background: #fff;
+                            right: 3px;
+                            top: 3px;
+                        }
+
+                        span{
+                            position: absolute;
+                            font-size: 10px;
+                            background: #fff;
+                            left: 10px;
+                            top: -7px;
+                            padding: 0 4px;
+                            text-align: center;
+                        }
+                    }
+
+                    p{
+                        text-align: left;
+                    }
+                }
+            }
+
+            .submittedWrap{
+                .punchIcon{
+                    width: 150px;
+                    height: 150px;
+                    position: relative;
+                    margin: 30px 0px;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+    
+                    &:before{
+                        content:"";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: #E6F7FF;
+                        border-radius: 50%;
+                        left:0;
+                        top: 0;
+                        z-index: -1;
+                        animation: zoomIn .7s 1;
+                    }
+                    
+                    &:after{
+                        content:"";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: #E6F7FF;
+                        border-radius: 50%;
+                        left:0;
+                        top: 0;
+                        z-index: 1;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 50%;
+                        background-image:  url("../../shared/Images/Icons/PunchWhite.png");
+                        animation: zoomIn .4s 1;
+                    }
+                }
+
+                button{
+                    margin-top: 40px;
+                    background: #FFCE5B;
+                    color: #FF8010 !important;
+                    font-weight: 600;
+                }
+            }
+
+            button{
+                background: $base-color;
+                border: 0px;
+                color: #fff !important;
+                box-shadow: 0px 13px 30px #A8A3FF66;
+                padding: 8px 40px;
+                padding-bottom: 16px !important;
+                border-radius: 6px;
+                font-size: 14px;
+                height: 40px;
+                margin-bottom: 15px;
+            }
+
+            .linksWrap{
+                @include flex-row();
+                justify-content: space-around;
+                width: 100%;
+                margin-top: 15px;
+                padding: 0 10px;
+                text-align: center;
+
+                .link{
+                    color: #ababb1 !important;
+                    font-size: 10px;
+                    text-align: center;
+                    flex:1;
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+    .pricingTableWrap{
+        .heading{
+            .tierWrap{
+
+                h3{
+                    &:before{
+                        top: -7px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: $breakpoint-sm) {
     .pricingTableWrap{
@@ -242,6 +534,17 @@ $border-radius: 10px;
 
             &.finalRow{
                 border-radius: 0;
+            }
+        }
+    }
+
+    .popUpOverlay {    
+        .popUpWrap {
+            width: calc(100% - 30px);
+            max-width: 400px;
+
+            .body{
+                padding: 30px 25px !important;
             }
         }
     }

@@ -56,16 +56,16 @@
     
     &.PuppyEmoji {
         left: 31%;
-        top: 2%;
+        top: 8%;
     }
     
     &.ClipBoard {
         left: 50%;
-        top: 2%;
+        top: 4%;
     }
     
     &.Puppy {
-        right: 4%;
+        right: 24%;
         top: 5%;
     }
     
@@ -105,12 +105,12 @@
     }
     
     &.Burger {
-        bottom: 4%;
+        bottom: 11%;
         left: 46%;
     }
     
     &.Lady {
-        right: 4%;
+        right: 14%;
         bottom: 11%;
     }
     
@@ -123,7 +123,7 @@
 @media only screen and (max-width: $breakpoint-md) {
     .flexRow .absoluteFlyingIcon{
         &.Monitor {
-            bottom: 14% !important;
+            bottom: 8% !important;
             left: 6% !important;
         }
         
@@ -132,7 +132,7 @@
         }
         
         &.BirthdayPup {
-            left: 2% !important;
+            left: 8% !important;
         }
         
         &.Drink {
@@ -140,20 +140,42 @@
         }
         
         &.Search {
-            right: 0% !important;
+            right: 5% !important;
         }
         
         &.ClipBoard {
-            top: 0% !important;
+            top: 17% !important;
+            right: 34% !important;
         }
         
         &.PuppyEmoji {
-            top: 1% !important;
-            left: 23% !important;
+            top: 8% !important;
+            left: 32% !important;
         }
         
         &.Aesthetics {
             left: 9% !important;
+            top: 5% !important;
+        }
+
+        &.Money {
+            left: 5%;
+            top: 21%;
+        }
+            
+        &.WheelChair {
+            left: 20%;
+            bottom: 21%;
+        }
+
+        &.Lady {
+            right: 9%;
+            bottom: 7%;
+        }
+
+        &.Mobile {
+            right: 25%;
+            bottom: 18%;
         }
     }
 }
