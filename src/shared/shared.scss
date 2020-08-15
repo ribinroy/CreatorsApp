@@ -34,41 +34,41 @@ $breakpoint-sm: 767px;
 @font-face {
     font-family: 'Cera Pro Medium';
     font-style: normal;
-    src: url("Fonts/Cera Pro Medium/Cera Pro Medium.eot"); /* IE9*/
+    // src: url("Fonts/Cera Pro Medium/Cera Pro Medium.eot"); /* IE9*/
     src: url("Fonts/Cera Pro Medium/Cera Pro Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("Fonts/Cera Pro Medium/Cera Pro Medium.woff2") format("woff2"), /* chrome、firefox */
-    url("Fonts/Cera Pro Medium/Cera Pro Medium.woff") format("woff"), /* chrome、firefox */
+    // url("Fonts/Cera Pro Medium/Cera Pro Medium.woff2") format("woff2"), /* chrome、firefox */
+    // url("Fonts/Cera Pro Medium/Cera Pro Medium.woff") format("woff"), /* chrome、firefox */
     url("Fonts/Cera Pro Medium/Cera Pro Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Cera Pro Medium/Cera Pro Medium.svg#Cera PRO Medium") format("svg"); /* iOS 4.1- */
+    // url("Fonts/Cera Pro Medium/Cera Pro Medium.svg#Cera PRO Medium") format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
     font-family: 'Cera Pro Bold';
     font-style: normal;
-    src: url("Fonts/Cera Pro Bold/Cera Pro Bold.eot"); /* IE9*/
+    // src: url("Fonts/Cera Pro Bold/Cera Pro Bold.eot"); /* IE9*/
     src: url("Fonts/Cera Pro Bold/Cera Pro Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("Fonts/Cera Pro Bold/Cera Pro Bold.woff2") format("woff2"), /* chrome、firefox */
-    url("Fonts/Cera Pro Bold/Cera Pro Bold.woff") format("woff"), /* chrome、firefox */
+    // url("Fonts/Cera Pro Bold/Cera Pro Bold.woff2") format("woff2"), /* chrome、firefox */
+    // url("Fonts/Cera Pro Bold/Cera Pro Bold.woff") format("woff"), /* chrome、firefox */
     url("Fonts/Cera Pro Bold/Cera Pro Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Cera Pro Bold/Cera Pro Bold.svg#Cera Pro Bold") format("svg"); /* iOS 4.1- */
+    // url("Fonts/Cera Pro Bold/Cera Pro Bold.svg#Cera Pro Bold") format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
     font-family: 'Axiforma Medium';
     font-style: normal;
-    src: url("Fonts/Axiforma Medium/Axiforma Medium.eot"); /* IE9*/
+    // src: url("Fonts/Axiforma Medium/Axiforma Medium.eot"); /* IE9*/
     src: url("Fonts/Axiforma Medium/Axiforma Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("Fonts/Axiforma Medium/Axiforma Medium.woff2") format("woff2"), /* chrome、firefox */
-    url("Fonts/Axiforma Medium/Axiforma Medium.woff") format("woff"), /* chrome、firefox */
+    // url("Fonts/Axiforma Medium/Axiforma Medium.woff2") format("woff2"), /* chrome、firefox */
+    // url("Fonts/Axiforma Medium/Axiforma Medium.woff") format("woff"), /* chrome、firefox */
     url("Fonts/Axiforma Medium/Axiforma Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Axiforma Medium/Axiforma Medium.svg#Axiforma Medium") format("svg"); /* iOS 4.1- */
+    // url("Fonts/Axiforma Medium/Axiforma Medium.svg#Axiforma Medium") format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
     font-family: 'Axiforma Regular';
-    src: url('Fonts/Axiforma Regular/Axiforma Regular.eot');
+    // src: url('Fonts/Axiforma Regular/Axiforma Regular.eot');
     src: url('Fonts/Axiforma Regular/Axiforma Regular.eot?#iefix') format('embedded-opentype'),
-    url('Fonts/Axiforma Regular/Axiforma Regular.woff') format('woff'),
+    // url('Fonts/Axiforma Regular/Axiforma Regular.woff') format('woff'),
     url('Fonts/Axiforma Regular/Axiforma Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -77,22 +77,22 @@ $breakpoint-sm: 767px;
 @font-face {
     font-family: 'Axiforma Bold';
     font-style: normal;
-    src: url("Fonts/Axiforma Bold/Axiforma Bold.eot"); /* IE9*/
+    // src: url("Fonts/Axiforma Bold/Axiforma Bold.eot"); /* IE9*/
     src: url("Fonts/Axiforma Bold/Axiforma Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("Fonts/Axiforma Bold/Axiforma Bold.woff2") format("woff2"), /* chrome、firefox */
-    url("Fonts/Axiforma Bold/Axiforma Bold.woff") format("woff"), /* chrome、firefox */
+    // url("Fonts/Axiforma Bold/Axiforma Bold.woff2") format("woff2"), /* chrome、firefox */
+    // url("Fonts/Axiforma Bold/Axiforma Bold.woff") format("woff"), /* chrome、firefox */
     url("Fonts/Axiforma Bold/Axiforma Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Axiforma Bold/Axiforma Bold.svg#Axiforma Bold") format("svg"); /* iOS 4.1- */
+    // url("Fonts/Axiforma Bold/Axiforma Bold.svg#Axiforma Bold") format("svg"); /* iOS 4.1- */
 }
 
 @font-face {
     font-family: "Axiforma SemiBold";
-    src: url("Fonts/Axiforma SemiBold/Axiforma SemiBold.eot"); /* IE9*/
+    // src: url("Fonts/Axiforma SemiBold/Axiforma SemiBold.eot"); /* IE9*/
     src: url("Fonts/Axiforma SemiBold/Axiforma SemiBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("Fonts/Axiforma SemiBold/Axiforma SemiBold.woff2") format("woff2"), /* chrome、firefox */
-    url("Fonts/Axiforma SemiBold/Axiforma SemiBold.woff") format("woff"), /* chrome、firefox */
+    // url("Fonts/Axiforma SemiBold/Axiforma SemiBold.woff2") format("woff2"), /* chrome、firefox */
+    // url("Fonts/Axiforma SemiBold/Axiforma SemiBold.woff") format("woff"), /* chrome、firefox */
     url("Fonts/Axiforma SemiBold/Axiforma SemiBold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("Fonts/Axiforma SemiBold/Axiforma SemiBold.svg#Axiforma SemiBold") format("svg"); /* iOS 4.1- */
+    // url("Fonts/Axiforma SemiBold/Axiforma SemiBold.svg#Axiforma SemiBold") format("svg"); /* iOS 4.1- */
 }
 
 // -----------end of Fonts-------------
