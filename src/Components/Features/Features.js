@@ -182,18 +182,18 @@ function JoinPrivateBeta(){
                     <div className={"joinArrow " + (isFormOpened?"active":"") + (registerCompeted?" hideArrow":"")} onClick={() => changeFormOpened(!isFormOpened)}></div>
                 </div>
                 <form className={"joinerFormWrap " + ((isFormOpened && !registerCompeted)?"active":"")}>
-                    <div className="joinerInputRelativeWrap">
-                        <input className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
-                        <label className="joinerInputLabel">You@example.com</label>
-                    </div>
-                    <div className="joinerInputRelativeWrap">
+                    <label className="joinerInputRelativeWrap">
+                        <input id="email" className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
+                        <div htmlfor="email" className="joinerInputLabel">You@example.com</div>
+                    </label>
+                    <label className="joinerInputRelativeWrap">
                         <input className={"joinerInput " + (nickName === ""?"":"filled")}  type="text" name="Nickname" onChange={e => changeNickName(e.target.value)}/>
-                        <label className="joinerInputLabel">Nickname</label>
-                    </div>
-                    <div className="joinerInputRelativeWrap">
+                        <div className="joinerInputLabel">Nickname</div>
+                    </label>
+                    <label className="joinerInputRelativeWrap">
                         <input className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
-                        <label className="joinerInputLabel">What do you do</label>
-                    </div>
+                        <div className="joinerInputLabel">What do you do</div>
+                    </label>
                     <button className="joinerSubmitButton" type="submit" onClick={(e) => {e.preventDefault(); changeRegisterCompeted(true);}}>Let's do this</button>
                     <p>
                         No unsolicited emails. No spam. No hits, just updates

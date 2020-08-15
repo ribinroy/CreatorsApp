@@ -18,7 +18,7 @@ function Pricing(){
     const [popUpMetaData, setPopUpMetadata] = useState(false);
 
     return (
-        <div className="pricingTableWrap" id="Pricing">
+        <section className="pricingTableWrap" id="Pricing">
             <div className="heading"  data-aos="fade-in" data-aos-duration="800" data-aos-delay="100" data-aos-offset="10">
                 <div className="detailWrap">
                     <h3>Pricing That Fits Your Purse</h3>
@@ -71,7 +71,7 @@ function Pricing(){
                 popUpMetaData !== false && 
                 <PaymentPopUp data={popUpMetaData} close={() => setPopUpMetadata(false)}/>
             }
-        </div>
+        </section>
     )
 }
 

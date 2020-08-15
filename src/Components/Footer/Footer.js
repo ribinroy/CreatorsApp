@@ -29,7 +29,7 @@ function Footer(){
                         <a href="/#" className="socialIcon">TW</a>
                         <a href="/#" className="socialIcon">IG</a>
                     </div>
-                    <a className="creatorsAppLogo" href="/#Home"><span></span></a>
+                    <a className="creatorsAppLogo" href="/#Home"><span className="mockTextHide">.</span><span></span></a>
                 </div>
             </Container>
         </footer>
