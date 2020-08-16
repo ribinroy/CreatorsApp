@@ -184,15 +184,15 @@ function JoinPrivateBeta(){
                 <form className={"joinerFormWrap " + ((isFormOpened && !registerCompeted)?"active":"")}>
                     <label className="joinerInputRelativeWrap">
                         <input id="email" className={"joinerInput " + (email === ""?"":"filled")} type="email" name="Email" onChange={e => changeEmail(e.target.value)}/>
-                        <div htmlfor="email" className="joinerInputLabel">You@example.com</div>
+                        <div htmlFor="email" className="joinerInputLabel">You@example.com</div>
                     </label>
                     <label className="joinerInputRelativeWrap">
-                        <input className={"joinerInput " + (nickName === ""?"":"filled")}  type="text" name="Nickname" onChange={e => changeNickName(e.target.value)}/>
-                        <div className="joinerInputLabel">Nickname</div>
+                        <input id="Nickname" className={"joinerInput " + (nickName === ""?"":"filled")}  type="text" name="Nickname" onChange={e => changeNickName(e.target.value)}/>
+                        <div htmlFor="Nickname" className="joinerInputLabel">Nickname</div>
                     </label>
                     <label className="joinerInputRelativeWrap">
-                        <input className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
-                        <div className="joinerInputLabel">What do you do</div>
+                        <input id="WhatYouDo" className={"joinerInput " + (whatYouDo === ""?"":"filled")}  type="text" name="WhatYouDo" onChange={e => changeWhatYouDo(e.target.value)}/>
+                        <div htmlFor="WhatYouDo" className="joinerInputLabel">What do you do</div>
                     </label>
                     <button className="joinerSubmitButton" type="submit" onClick={(e) => {e.preventDefault(); changeRegisterCompeted(true);}}>Let's do this</button>
                     <p>

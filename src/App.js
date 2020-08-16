@@ -6,21 +6,25 @@ import Footer from './Components/Footer/Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 
-function loadCompleted(){
+function loadCompleted(delay){
     setTimeout(function(){
-        document.getElementById("initialLoader").remove();
+        const loader = document.getElementById("initialLoader");
+        if(loader === null)
+            return false;
+            
+        loader.remove();
         document.getElementById("root").style.display = "block"
         AOS.init({
             duration : 2000
         })
-    }, 1100)
+    }, delay)
 }
 
 export default function App() {
+    loadCompleted(5100);
     useEffect(() => {
         // componentdidmount
-
-        window.addEventListener('load', loadCompleted);
+        window.addEventListener('load', loadCompleted(1100));
     })
     
     return (
