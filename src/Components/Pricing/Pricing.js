@@ -60,10 +60,10 @@ function Pricing(){
             }
             <div className="finalButtonWrap" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400" data-aos-offset="10">
                 <div className="detailWrap">.</div>
-                <div className="tierWrap tier1" onClick={() => setPopUpMetadata({tier: "Tier 1", rate: 12.99})}>
+                <div className={"tierWrap tier1" + ((popUpMetaData && popUpMetaData.tier === "Tier 1")?" active":"")} onClick={() => setPopUpMetadata({tier: "Tier 1", rate: 12.99})}>
                     Start 14days Trial
                 </div>
-                <div className="tierWrap tier2" onClick={() => setPopUpMetadata({tier: "Tier 2", rate: 24.99})}>
+                <div className={"tierWrap tier2" + ((popUpMetaData && popUpMetaData.tier === "Tier 2")?" active":"")} onClick={() => setPopUpMetadata({tier: "Tier 2", rate: 24.99})}>
                     Start 14days Trial
                 </div>
             </div>

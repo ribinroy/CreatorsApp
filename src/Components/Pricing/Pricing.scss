@@ -183,16 +183,29 @@ $grey-color: #E6E5ED;
             padding: 15px 0;
             cursor: pointer;
             border-bottom: 3px solid $base-color;
+            color: $base-color;
+            transition: all .4s;
 
             &.tier1{
-                background: $base-color;
                 border-bottom-left-radius: $border-radius;
+                border-left: 3px solid $base-color;
+                border-right: 1.5px solid $base-color;
             }
 
             &.tier2{
-                color: $base-color;
                 border-bottom-right-radius: $border-radius;
                 border-right: 3px solid $base-color;
+                border-left: 1.5px solid $base-color;
+            }
+
+            &:hover{
+                background: $base-color;
+                color: #fff;
+            }
+
+            &.active{
+                background: $base-color;
+                color: #fff;
             }
         }
     }
