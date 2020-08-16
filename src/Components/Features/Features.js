@@ -79,7 +79,7 @@ function HealthContents(){
                         <div className="featureImage" style={{ backgroundImage: `url(${require("../../shared/Images/Health Items/Forth.png")})`}} alt="Health Benefit 4"></div>
                     </div>
                     <div className="featureContentDesciprionWrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0"  data-aos-offset="15">
-                        <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p>
+                        {/* <p>Get a well personalized and proper diagnosis for your body and soul. You have work to do and we know that, that's why we are here to help you.</p> */}
                         <div className="flexRowOnlyOnMobile">
                             <ul>
                                 <li>Whole family coverage</li>
